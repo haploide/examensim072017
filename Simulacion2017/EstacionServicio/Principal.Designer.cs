@@ -34,9 +34,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(965, 531);
             this.Name = "frm_principal";
-            this.Text = "SIM - Ej25 - Estación de Servicio";
+            this.Text = "           ";
             this.ResumeLayout(false);
 
         }
