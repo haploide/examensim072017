@@ -45,6 +45,11 @@
   <ItemGroup>
     <Compile Include="Distribuciones.cs" />
     <Compile Include="Estados.cs" />
+    <Compile Include="Evento.cs" />
+    <Compile Include="FinServicioCombustible.cs" />
+    <Compile Include="FinServicioGas.cs" />
+    <Compile Include="LlegadaVehiculosCombustible.cs" />
+    <Compile Include="LlegadaVehiculosGas.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -14,44 +14,24 @@ namespace EstacionServicio
         private Queue<Vehiculo> cola;
         private double horaInicioOcio;
         private double acumTiempoOcio;
+        private string nombreEstado;
 
 
-        public Surtidor(string id, _TipoServicio tipo, double horaInicioOcio)
+        public Surtidor(string id, _TipoServicio tipo, double horaInicioOcio, string nombre)
         {
             estado = _EstadoSurtidor.Libre;
             tipoServicio = tipo;
             cola = new Queue<Vehiculo>();
             idSurtidor = id;
             this.horaInicioOcio = horaInicioOcio;
-            acumTiempoOcio=0.00;
+            acumTiempoOcio = 0.00;
+            nombreEstado = nombre;
 
         }
-        public _EstadoSurtidor Estado
-        {
-            get
-            {
-                return estado;
-            }
+        public _EstadoSurtidor Estado { get; set; }
 
-            set
-            {
-                estado = value;
-            }
-        }
-
-        public _TipoServicio TipoServicio
-        {
-            get
-            {
-                return tipoServicio;
-            }
-
-            set
-            {
-                tipoServicio = value;
-            }
-        }
-
+        public _TipoServicio TipoServicio { get; set; }
+        
         public string getNombreEstado()
         {
             return nombreEstado;
