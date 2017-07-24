@@ -11,7 +11,7 @@ namespace EstacionServicio
         private double tiempoEntreLlegadas;
         private double proximaLlegada;
         private string nombreEvento = "llegada_gas";
-        private static Random randomGas;
+        private Random randomGas;
         private double mu;
         
         public LlegadaVehiculosGas(double mu, Random random)

@@ -42,7 +42,10 @@ namespace EstacionServicio
         {
             return demora;
         }
-
+        public void setHoraFin(double horaFin)
+        {
+            proximoFin = horaFin;
+        }
         public override double getProximaLlegada()
         {
             return proximoFin;

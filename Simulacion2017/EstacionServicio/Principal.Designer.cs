@@ -56,6 +56,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_principal));
             this.gpbParametros = new System.Windows.Forms.GroupBox();
             this.grbEstadisticas = new System.Windows.Forms.GroupBox();
@@ -189,6 +190,8 @@
             this.colAcumGasAtendidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAcumTiempoEsperaComb = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAcumTiempoEsperaGas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colContVehiculosEsperaronComb = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colContVehiculosEsperaronGas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpbParametros.SuspendLayout();
             this.grbEstadisticas.SuspendLayout();
             this.gpbTiemposFin.SuspendLayout();
@@ -1009,7 +1012,9 @@
             this.colAcumCombAtendidos,
             this.colAcumGasAtendidos,
             this.colAcumTiempoEsperaComb,
-            this.colAcumTiempoEsperaGas});
+            this.colAcumTiempoEsperaGas,
+            this.colContVehiculosEsperaronComb,
+            this.colContVehiculosEsperaronGas});
             this.dgvResultados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvResultados.Location = new System.Drawing.Point(3, 16);
             this.dgvResultados.MultiSelect = false;
@@ -1082,7 +1087,7 @@
             this.txtNEventosMostrar.Name = "txtNEventosMostrar";
             this.txtNEventosMostrar.Size = new System.Drawing.Size(48, 20);
             this.txtNEventosMostrar.TabIndex = 2;
-            this.txtNEventosMostrar.Text = "100";
+            this.txtNEventosMostrar.Text = "10";
             this.txtNEventosMostrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtNEventosMostrar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtColaMax_KeyDown);
             // 
@@ -1137,6 +1142,7 @@
             // txtTiempoSim
             // 
             this.txtTiempoSim.Location = new System.Drawing.Point(108, 18);
+            this.txtTiempoSim.MaxLength = 6;
             this.txtTiempoSim.Name = "txtTiempoSim";
             this.txtTiempoSim.Size = new System.Drawing.Size(48, 20);
             this.txtTiempoSim.TabIndex = 0;
@@ -1163,6 +1169,9 @@
             // 
             // colReloj
             // 
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.colReloj.DefaultCellStyle = dataGridViewCellStyle1;
             this.colReloj.HeaderText = "Reloj";
             this.colReloj.Name = "colReloj";
             this.colReloj.ReadOnly = true;
@@ -1171,174 +1180,174 @@
             // 
             // colRNDLlegadaComb
             // 
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.colRNDLlegadaComb.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.colRNDLlegadaComb.DefaultCellStyle = dataGridViewCellStyle2;
             this.colRNDLlegadaComb.HeaderText = "RND Llegada Combustible";
             this.colRNDLlegadaComb.Name = "colRNDLlegadaComb";
             this.colRNDLlegadaComb.ReadOnly = true;
             this.colRNDLlegadaComb.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colRNDLlegadaComb.Width = 73;
+            this.colRNDLlegadaComb.Width = 124;
             // 
             // colTiempoLlegadaComb
             // 
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.colTiempoLlegadaComb.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.colTiempoLlegadaComb.DefaultCellStyle = dataGridViewCellStyle3;
             this.colTiempoLlegadaComb.HeaderText = "Tiempo Llegada Combustible";
             this.colTiempoLlegadaComb.Name = "colTiempoLlegadaComb";
             this.colTiempoLlegadaComb.ReadOnly = true;
             this.colTiempoLlegadaComb.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colTiempoLlegadaComb.Width = 83;
+            this.colTiempoLlegadaComb.Width = 134;
             // 
             // colProxLlegadaComb
             // 
-            dataGridViewCellStyle3.Format = "N2";
-            this.colProxLlegadaComb.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Format = "N2";
+            this.colProxLlegadaComb.DefaultCellStyle = dataGridViewCellStyle4;
             this.colProxLlegadaComb.HeaderText = "Próxima Llegada Combustible";
             this.colProxLlegadaComb.Name = "colProxLlegadaComb";
             this.colProxLlegadaComb.ReadOnly = true;
             this.colProxLlegadaComb.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colProxLlegadaComb.Width = 85;
+            this.colProxLlegadaComb.Width = 136;
             // 
             // colRNDLlegadaGas
             // 
-            dataGridViewCellStyle4.Format = "N2";
-            this.colRNDLlegadaGas.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Format = "N2";
+            this.colRNDLlegadaGas.DefaultCellStyle = dataGridViewCellStyle5;
             this.colRNDLlegadaGas.HeaderText = "RND Llegada Gas";
             this.colRNDLlegadaGas.Name = "colRNDLlegadaGas";
             this.colRNDLlegadaGas.ReadOnly = true;
             this.colRNDLlegadaGas.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colRNDLlegadaGas.Width = 66;
+            this.colRNDLlegadaGas.Width = 73;
             // 
             // colTiempoLlegadaGas
             // 
-            dataGridViewCellStyle5.Format = "N2";
-            this.colTiempoLlegadaGas.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Format = "N2";
+            this.colTiempoLlegadaGas.DefaultCellStyle = dataGridViewCellStyle6;
             this.colTiempoLlegadaGas.HeaderText = "Tiempo Llegada Gas";
             this.colTiempoLlegadaGas.Name = "colTiempoLlegadaGas";
             this.colTiempoLlegadaGas.ReadOnly = true;
             this.colTiempoLlegadaGas.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colTiempoLlegadaGas.Width = 66;
+            this.colTiempoLlegadaGas.Width = 83;
             // 
             // colProxLlegadaGas
             // 
-            dataGridViewCellStyle6.Format = "N2";
-            this.colProxLlegadaGas.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle7.Format = "N2";
+            this.colProxLlegadaGas.DefaultCellStyle = dataGridViewCellStyle7;
             this.colProxLlegadaGas.HeaderText = "Próxima Llegada Gas";
             this.colProxLlegadaGas.Name = "colProxLlegadaGas";
             this.colProxLlegadaGas.ReadOnly = true;
             this.colProxLlegadaGas.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colProxLlegadaGas.Width = 66;
+            this.colProxLlegadaGas.Width = 85;
             // 
             // colRNDFinCombustible
             // 
-            dataGridViewCellStyle7.Format = "N2";
-            this.colRNDFinCombustible.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Format = "N2";
+            this.colRNDFinCombustible.DefaultCellStyle = dataGridViewCellStyle8;
             this.colRNDFinCombustible.HeaderText = "RND Fin Atencion Combustible";
             this.colRNDFinCombustible.Name = "colRNDFinCombustible";
             this.colRNDFinCombustible.ReadOnly = true;
             this.colRNDFinCombustible.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colRNDFinCombustible.Width = 92;
+            this.colRNDFinCombustible.Width = 143;
             // 
             // colTiempoFinCombustible
             // 
-            dataGridViewCellStyle8.Format = "N2";
-            this.colTiempoFinCombustible.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle9.Format = "N2";
+            this.colTiempoFinCombustible.DefaultCellStyle = dataGridViewCellStyle9;
             this.colTiempoFinCombustible.HeaderText = "Tiempo Fin Atención Combustible";
             this.colTiempoFinCombustible.Name = "colTiempoFinCombustible";
             this.colTiempoFinCombustible.ReadOnly = true;
             this.colTiempoFinCombustible.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colTiempoFinCombustible.Width = 102;
+            this.colTiempoFinCombustible.Width = 153;
             // 
             // colFinCombustibleServ1
             // 
-            dataGridViewCellStyle9.Format = "N2";
-            this.colFinCombustibleServ1.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.Format = "N2";
+            this.colFinCombustibleServ1.DefaultCellStyle = dataGridViewCellStyle10;
             this.colFinCombustibleServ1.HeaderText = "Fin Atención Comb. Surt1";
             this.colFinCombustibleServ1.Name = "colFinCombustibleServ1";
             this.colFinCombustibleServ1.ReadOnly = true;
             this.colFinCombustibleServ1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colFinCombustibleServ1.Width = 68;
+            this.colFinCombustibleServ1.Width = 97;
             // 
             // colFinCombustibleServ2
             // 
-            dataGridViewCellStyle10.Format = "N2";
-            this.colFinCombustibleServ2.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle11.Format = "N2";
+            this.colFinCombustibleServ2.DefaultCellStyle = dataGridViewCellStyle11;
             this.colFinCombustibleServ2.HeaderText = "Fin Atención Comb. Surt2";
             this.colFinCombustibleServ2.Name = "colFinCombustibleServ2";
             this.colFinCombustibleServ2.ReadOnly = true;
             this.colFinCombustibleServ2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colFinCombustibleServ2.Width = 68;
+            this.colFinCombustibleServ2.Width = 97;
             // 
             // colFinCombustibleServ3
             // 
-            dataGridViewCellStyle11.Format = "N2";
-            this.colFinCombustibleServ3.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle12.Format = "N2";
+            this.colFinCombustibleServ3.DefaultCellStyle = dataGridViewCellStyle12;
             this.colFinCombustibleServ3.HeaderText = "Fin Atención Comb. Surt3";
             this.colFinCombustibleServ3.Name = "colFinCombustibleServ3";
             this.colFinCombustibleServ3.ReadOnly = true;
             this.colFinCombustibleServ3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colFinCombustibleServ3.Width = 68;
+            this.colFinCombustibleServ3.Width = 97;
             // 
             // colFinCombustibleServ4
             // 
-            dataGridViewCellStyle12.Format = "N2";
-            this.colFinCombustibleServ4.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle13.Format = "N2";
+            this.colFinCombustibleServ4.DefaultCellStyle = dataGridViewCellStyle13;
             this.colFinCombustibleServ4.HeaderText = "Fin Atención Comb. Surt4";
             this.colFinCombustibleServ4.Name = "colFinCombustibleServ4";
             this.colFinCombustibleServ4.ReadOnly = true;
             this.colFinCombustibleServ4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colFinCombustibleServ4.Width = 68;
+            this.colFinCombustibleServ4.Width = 97;
             // 
             // colRNDFinGas
             // 
-            dataGridViewCellStyle13.Format = "N2";
-            this.colRNDFinGas.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle14.Format = "N2";
+            this.colRNDFinGas.DefaultCellStyle = dataGridViewCellStyle14;
             this.colRNDFinGas.HeaderText = "RND Fin Atención Gas";
             this.colRNDFinGas.Name = "colRNDFinGas";
             this.colRNDFinGas.ReadOnly = true;
             this.colRNDFinGas.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colRNDFinGas.Width = 69;
+            this.colRNDFinGas.Width = 92;
             // 
             // colTiempoFinGas
             // 
-            dataGridViewCellStyle14.Format = "N2";
-            this.colTiempoFinGas.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle15.Format = "N2";
+            this.colTiempoFinGas.DefaultCellStyle = dataGridViewCellStyle15;
             this.colTiempoFinGas.HeaderText = "Tiempo Fin Atención Gas";
             this.colTiempoFinGas.Name = "colTiempoFinGas";
             this.colTiempoFinGas.ReadOnly = true;
-            this.colTiempoFinGas.Width = 80;
+            this.colTiempoFinGas.Width = 121;
             // 
             // colFinGasServ1
             // 
-            dataGridViewCellStyle15.Format = "N2";
-            this.colFinGasServ1.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle16.Format = "N2";
+            this.colFinGasServ1.DefaultCellStyle = dataGridViewCellStyle16;
             this.colFinGasServ1.HeaderText = "Fin Atención Gas Surt1";
             this.colFinGasServ1.Name = "colFinGasServ1";
             this.colFinGasServ1.ReadOnly = true;
             this.colFinGasServ1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colFinGasServ1.Width = 68;
+            this.colFinGasServ1.Width = 87;
             // 
             // colFinGasServ2
             // 
-            dataGridViewCellStyle16.Format = "N2";
-            this.colFinGasServ2.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle17.Format = "N2";
+            this.colFinGasServ2.DefaultCellStyle = dataGridViewCellStyle17;
             this.colFinGasServ2.HeaderText = "Fin Atención Gas Surt2";
             this.colFinGasServ2.Name = "colFinGasServ2";
             this.colFinGasServ2.ReadOnly = true;
             this.colFinGasServ2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colFinGasServ2.Width = 68;
+            this.colFinGasServ2.Width = 87;
             // 
             // colFinGasServ3
             // 
-            dataGridViewCellStyle17.Format = "N2";
-            this.colFinGasServ3.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle18.Format = "N2";
+            this.colFinGasServ3.DefaultCellStyle = dataGridViewCellStyle18;
             this.colFinGasServ3.HeaderText = "Fin Atención Gas Surt3";
             this.colFinGasServ3.Name = "colFinGasServ3";
             this.colFinGasServ3.ReadOnly = true;
             this.colFinGasServ3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colFinGasServ3.Width = 68;
+            this.colFinGasServ3.Width = 87;
             // 
             // colEstadoCombSurt1
             // 
@@ -1346,7 +1355,7 @@
             this.colEstadoCombSurt1.Name = "colEstadoCombSurt1";
             this.colEstadoCombSurt1.ReadOnly = true;
             this.colEstadoCombSurt1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colEstadoCombSurt1.Width = 64;
+            this.colEstadoCombSurt1.Width = 74;
             // 
             // colColaCombSurt1
             // 
@@ -1354,17 +1363,17 @@
             this.colColaCombSurt1.Name = "colColaCombSurt1";
             this.colColaCombSurt1.ReadOnly = true;
             this.colColaCombSurt1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colColaCombSurt1.Width = 63;
+            this.colColaCombSurt1.Width = 86;
             // 
             // colInicioOcioCombSurt1
             // 
-            dataGridViewCellStyle18.Format = "N2";
-            this.colInicioOcioCombSurt1.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle19.Format = "N2";
+            this.colInicioOcioCombSurt1.DefaultCellStyle = dataGridViewCellStyle19;
             this.colInicioOcioCombSurt1.HeaderText = "Inicio Ocio Comb. Surt1";
             this.colInicioOcioCombSurt1.Name = "colInicioOcioCombSurt1";
             this.colInicioOcioCombSurt1.ReadOnly = true;
             this.colInicioOcioCombSurt1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colInicioOcioCombSurt1.Width = 57;
+            this.colInicioOcioCombSurt1.Width = 89;
             // 
             // colEstadoCombSurt2
             // 
@@ -1372,7 +1381,7 @@
             this.colEstadoCombSurt2.Name = "colEstadoCombSurt2";
             this.colEstadoCombSurt2.ReadOnly = true;
             this.colEstadoCombSurt2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colEstadoCombSurt2.Width = 64;
+            this.colEstadoCombSurt2.Width = 74;
             // 
             // colColaCombSurt2
             // 
@@ -1380,17 +1389,17 @@
             this.colColaCombSurt2.Name = "colColaCombSurt2";
             this.colColaCombSurt2.ReadOnly = true;
             this.colColaCombSurt2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colColaCombSurt2.Width = 63;
+            this.colColaCombSurt2.Width = 86;
             // 
             // colInicioOcioCombSurt2
             // 
-            dataGridViewCellStyle19.Format = "N2";
-            this.colInicioOcioCombSurt2.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle20.Format = "N2";
+            this.colInicioOcioCombSurt2.DefaultCellStyle = dataGridViewCellStyle20;
             this.colInicioOcioCombSurt2.HeaderText = "Inicio Ocio Comb. Surt2";
             this.colInicioOcioCombSurt2.Name = "colInicioOcioCombSurt2";
             this.colInicioOcioCombSurt2.ReadOnly = true;
             this.colInicioOcioCombSurt2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colInicioOcioCombSurt2.Width = 57;
+            this.colInicioOcioCombSurt2.Width = 89;
             // 
             // colEstadoCombSurt3
             // 
@@ -1398,7 +1407,7 @@
             this.colEstadoCombSurt3.Name = "colEstadoCombSurt3";
             this.colEstadoCombSurt3.ReadOnly = true;
             this.colEstadoCombSurt3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colEstadoCombSurt3.Width = 64;
+            this.colEstadoCombSurt3.Width = 74;
             // 
             // colColaCombSurt3
             // 
@@ -1406,17 +1415,17 @@
             this.colColaCombSurt3.Name = "colColaCombSurt3";
             this.colColaCombSurt3.ReadOnly = true;
             this.colColaCombSurt3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colColaCombSurt3.Width = 63;
+            this.colColaCombSurt3.Width = 86;
             // 
             // colInicioOcioCombSurt3
             // 
-            dataGridViewCellStyle20.Format = "N2";
-            this.colInicioOcioCombSurt3.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle21.Format = "N2";
+            this.colInicioOcioCombSurt3.DefaultCellStyle = dataGridViewCellStyle21;
             this.colInicioOcioCombSurt3.HeaderText = "Inicio Ocio Comb. Surt3";
             this.colInicioOcioCombSurt3.Name = "colInicioOcioCombSurt3";
             this.colInicioOcioCombSurt3.ReadOnly = true;
             this.colInicioOcioCombSurt3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colInicioOcioCombSurt3.Width = 57;
+            this.colInicioOcioCombSurt3.Width = 89;
             // 
             // colEstadoCombSurt4
             // 
@@ -1424,7 +1433,7 @@
             this.colEstadoCombSurt4.Name = "colEstadoCombSurt4";
             this.colEstadoCombSurt4.ReadOnly = true;
             this.colEstadoCombSurt4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colEstadoCombSurt4.Width = 64;
+            this.colEstadoCombSurt4.Width = 74;
             // 
             // colColaCombSurt4
             // 
@@ -1432,27 +1441,27 @@
             this.colColaCombSurt4.Name = "colColaCombSurt4";
             this.colColaCombSurt4.ReadOnly = true;
             this.colColaCombSurt4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colColaCombSurt4.Width = 63;
+            this.colColaCombSurt4.Width = 86;
             // 
             // colInicioOcioCombSurt4
             // 
-            dataGridViewCellStyle21.Format = "N2";
-            this.colInicioOcioCombSurt4.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle22.Format = "N2";
+            this.colInicioOcioCombSurt4.DefaultCellStyle = dataGridViewCellStyle22;
             this.colInicioOcioCombSurt4.HeaderText = "Inicio Ocio Comb. Surt4";
             this.colInicioOcioCombSurt4.Name = "colInicioOcioCombSurt4";
             this.colInicioOcioCombSurt4.ReadOnly = true;
             this.colInicioOcioCombSurt4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colInicioOcioCombSurt4.Width = 57;
+            this.colInicioOcioCombSurt4.Width = 89;
             // 
             // colAcumOcioCombSurt
             // 
-            dataGridViewCellStyle22.Format = "N2";
-            this.colAcumOcioCombSurt.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle23.Format = "N2";
+            this.colAcumOcioCombSurt.DefaultCellStyle = dataGridViewCellStyle23;
             this.colAcumOcioCombSurt.HeaderText = "Tiempo Ocio Acum Surt. Comb. ";
             this.colAcumOcioCombSurt.Name = "colAcumOcioCombSurt";
             this.colAcumOcioCombSurt.ReadOnly = true;
             this.colAcumOcioCombSurt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colAcumOcioCombSurt.Width = 61;
+            this.colAcumOcioCombSurt.Width = 118;
             // 
             // colEstadoGasSurt1
             // 
@@ -1460,7 +1469,7 @@
             this.colEstadoGasSurt1.Name = "colEstadoGasSurt1";
             this.colEstadoGasSurt1.ReadOnly = true;
             this.colEstadoGasSurt1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colEstadoGasSurt1.Width = 54;
+            this.colEstadoGasSurt1.Width = 64;
             // 
             // colColaGasSurt1
             // 
@@ -1468,17 +1477,17 @@
             this.colColaGasSurt1.Name = "colColaGasSurt1";
             this.colColaGasSurt1.ReadOnly = true;
             this.colColaGasSurt1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colColaGasSurt1.Width = 53;
+            this.colColaGasSurt1.Width = 76;
             // 
             // colInicioOcioGasSurt1
             // 
-            dataGridViewCellStyle23.Format = "N2";
-            this.colInicioOcioGasSurt1.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle24.Format = "N2";
+            this.colInicioOcioGasSurt1.DefaultCellStyle = dataGridViewCellStyle24;
             this.colInicioOcioGasSurt1.HeaderText = "Inicio Ocio Gas Surt1";
             this.colInicioOcioGasSurt1.Name = "colInicioOcioGasSurt1";
             this.colInicioOcioGasSurt1.ReadOnly = true;
             this.colInicioOcioGasSurt1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colInicioOcioGasSurt1.Width = 51;
+            this.colInicioOcioGasSurt1.Width = 79;
             // 
             // colEstadoGasSurt2
             // 
@@ -1486,7 +1495,7 @@
             this.colEstadoGasSurt2.Name = "colEstadoGasSurt2";
             this.colEstadoGasSurt2.ReadOnly = true;
             this.colEstadoGasSurt2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colEstadoGasSurt2.Width = 54;
+            this.colEstadoGasSurt2.Width = 64;
             // 
             // colColaGasSurt2
             // 
@@ -1494,17 +1503,17 @@
             this.colColaGasSurt2.Name = "colColaGasSurt2";
             this.colColaGasSurt2.ReadOnly = true;
             this.colColaGasSurt2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colColaGasSurt2.Width = 53;
+            this.colColaGasSurt2.Width = 76;
             // 
             // colInicioOcioGasSurt2
             // 
-            dataGridViewCellStyle24.Format = "N2";
-            this.colInicioOcioGasSurt2.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle25.Format = "N2";
+            this.colInicioOcioGasSurt2.DefaultCellStyle = dataGridViewCellStyle25;
             this.colInicioOcioGasSurt2.HeaderText = "Inicio Ocio Gas Surt2";
             this.colInicioOcioGasSurt2.Name = "colInicioOcioGasSurt2";
             this.colInicioOcioGasSurt2.ReadOnly = true;
             this.colInicioOcioGasSurt2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colInicioOcioGasSurt2.Width = 51;
+            this.colInicioOcioGasSurt2.Width = 79;
             // 
             // colEstadoGasSurt3
             // 
@@ -1512,7 +1521,7 @@
             this.colEstadoGasSurt3.Name = "colEstadoGasSurt3";
             this.colEstadoGasSurt3.ReadOnly = true;
             this.colEstadoGasSurt3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colEstadoGasSurt3.Width = 54;
+            this.colEstadoGasSurt3.Width = 64;
             // 
             // colColaGasSurt3
             // 
@@ -1520,27 +1529,27 @@
             this.colColaGasSurt3.Name = "colColaGasSurt3";
             this.colColaGasSurt3.ReadOnly = true;
             this.colColaGasSurt3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colColaGasSurt3.Width = 53;
+            this.colColaGasSurt3.Width = 76;
             // 
             // colInicioOcioGasSurt3
             // 
-            dataGridViewCellStyle25.Format = "N2";
-            this.colInicioOcioGasSurt3.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle26.Format = "N2";
+            this.colInicioOcioGasSurt3.DefaultCellStyle = dataGridViewCellStyle26;
             this.colInicioOcioGasSurt3.HeaderText = "Inicio Ocio Gas Surt3";
             this.colInicioOcioGasSurt3.Name = "colInicioOcioGasSurt3";
             this.colInicioOcioGasSurt3.ReadOnly = true;
             this.colInicioOcioGasSurt3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colInicioOcioGasSurt3.Width = 51;
+            this.colInicioOcioGasSurt3.Width = 79;
             // 
             // colAcumOcioGasSurt
             // 
-            dataGridViewCellStyle26.Format = "N2";
-            this.colAcumOcioGasSurt.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle27.Format = "N2";
+            this.colAcumOcioGasSurt.DefaultCellStyle = dataGridViewCellStyle27;
             this.colAcumOcioGasSurt.HeaderText = "Tiempo Ocio Acum Surt. Gas";
             this.colAcumOcioGasSurt.Name = "colAcumOcioGasSurt";
             this.colAcumOcioGasSurt.ReadOnly = true;
             this.colAcumOcioGasSurt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colAcumOcioGasSurt.Width = 51;
+            this.colAcumOcioGasSurt.Width = 95;
             // 
             // colAcumCombIngresados
             // 
@@ -1548,7 +1557,7 @@
             this.colAcumCombIngresados.Name = "colAcumCombIngresados";
             this.colAcumCombIngresados.ReadOnly = true;
             this.colAcumCombIngresados.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colAcumCombIngresados.Width = 85;
+            this.colAcumCombIngresados.Width = 112;
             // 
             // colAcumGasIngresaron
             // 
@@ -1556,7 +1565,7 @@
             this.colAcumGasIngresaron.Name = "colAcumGasIngresaron";
             this.colAcumGasIngresaron.ReadOnly = true;
             this.colAcumGasIngresaron.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colAcumGasIngresaron.Width = 77;
+            this.colAcumGasIngresaron.Width = 85;
             // 
             // colAcumCombRechazados
             // 
@@ -1564,7 +1573,7 @@
             this.colAcumCombRechazados.Name = "colAcumCombRechazados";
             this.colAcumCombRechazados.ReadOnly = true;
             this.colAcumCombRechazados.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colAcumCombRechazados.Width = 94;
+            this.colAcumCombRechazados.Width = 121;
             // 
             // colAcumGasRechazados
             // 
@@ -1572,7 +1581,7 @@
             this.colAcumGasRechazados.Name = "colAcumGasRechazados";
             this.colAcumGasRechazados.ReadOnly = true;
             this.colAcumGasRechazados.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colAcumGasRechazados.Width = 94;
+            this.colAcumGasRechazados.Width = 111;
             // 
             // colAcumCombAtendidos
             // 
@@ -1580,7 +1589,7 @@
             this.colAcumCombAtendidos.Name = "colAcumCombAtendidos";
             this.colAcumCombAtendidos.ReadOnly = true;
             this.colAcumCombAtendidos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colAcumCombAtendidos.Width = 82;
+            this.colAcumCombAtendidos.Width = 109;
             // 
             // colAcumGasAtendidos
             // 
@@ -1588,27 +1597,41 @@
             this.colAcumGasAtendidos.Name = "colAcumGasAtendidos";
             this.colAcumGasAtendidos.ReadOnly = true;
             this.colAcumGasAtendidos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colAcumGasAtendidos.Width = 74;
+            this.colAcumGasAtendidos.Width = 82;
             // 
             // colAcumTiempoEsperaComb
             // 
-            dataGridViewCellStyle27.Format = "N2";
-            this.colAcumTiempoEsperaComb.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle28.Format = "N2";
+            this.colAcumTiempoEsperaComb.DefaultCellStyle = dataGridViewCellStyle28;
             this.colAcumTiempoEsperaComb.HeaderText = "Acum. Espera Comb.";
             this.colAcumTiempoEsperaComb.Name = "colAcumTiempoEsperaComb";
             this.colAcumTiempoEsperaComb.ReadOnly = true;
             this.colAcumTiempoEsperaComb.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colAcumTiempoEsperaComb.Width = 74;
+            this.colAcumTiempoEsperaComb.Width = 101;
             // 
             // colAcumTiempoEsperaGas
             // 
-            dataGridViewCellStyle28.Format = "N2";
-            this.colAcumTiempoEsperaGas.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle29.Format = "N2";
+            this.colAcumTiempoEsperaGas.DefaultCellStyle = dataGridViewCellStyle29;
             this.colAcumTiempoEsperaGas.HeaderText = "Acum. Espera Gas";
             this.colAcumTiempoEsperaGas.Name = "colAcumTiempoEsperaGas";
             this.colAcumTiempoEsperaGas.ReadOnly = true;
             this.colAcumTiempoEsperaGas.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colAcumTiempoEsperaGas.Width = 61;
+            this.colAcumTiempoEsperaGas.Width = 74;
+            // 
+            // colContVehiculosEsperaronComb
+            // 
+            this.colContVehiculosEsperaronComb.HeaderText = "Cont Veh Esperaron Comb";
+            this.colContVehiculosEsperaronComb.Name = "colContVehiculosEsperaronComb";
+            this.colContVehiculosEsperaronComb.ReadOnly = true;
+            this.colContVehiculosEsperaronComb.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colContVehiculosEsperaronGas
+            // 
+            this.colContVehiculosEsperaronGas.HeaderText = "Cont Veh Esperaron Gas";
+            this.colContVehiculosEsperaronGas.Name = "colContVehiculosEsperaronGas";
+            this.colContVehiculosEsperaronGas.ReadOnly = true;
+            this.colContVehiculosEsperaronGas.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // frm_principal
             // 
@@ -1772,6 +1795,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colAcumGasAtendidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAcumTiempoEsperaComb;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAcumTiempoEsperaGas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colContVehiculosEsperaronComb;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colContVehiculosEsperaronGas;
     }
 }
 
