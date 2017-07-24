@@ -28,33 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_principal));
             this.gpbParametros = new System.Windows.Forms.GroupBox();
             this.grbEstadisticas = new System.Windows.Forms.GroupBox();
             this.label44 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtTiempoPromEsperaVehi = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtPromTiempoOcioSurt = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtPorcenAutosAtendidos = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
             this.txtTotalRechazados = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
             this.txtTotalIngresados = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtTiempoPromEsperaVehiGas = new System.Windows.Forms.TextBox();
+            this.txtTiempoPromEsperaVehiComb = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtPromTiempoOcioSurtGas = new System.Windows.Forms.TextBox();
+            this.txtPromTiempoOcioSurtComb = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtPorcenAutosGasAtendidos = new System.Windows.Forms.TextBox();
+            this.txtPorcenAutosCombAtendidos = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -133,31 +161,26 @@
             this.colEstadoCombSurt1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colColaCombSurt1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colInicioOcioCombSurt1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAcumOcioCombSurt1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEstadoCombSurt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colColaCombSurt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colInicioOcioCombSurt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAcumOcioCombSurt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEstadoCombSurt3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colColaCombSurt3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colInicioOcioCombSurt3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAcumOcioCombSurt3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEstadoCombSurt4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colColaCombSurt4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colInicioOcioCombSurt4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAcumOcioCombSurt4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAcumOcioCombSurt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEstadoGasSurt1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colColaGasSurt1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colInicioOcioGasSurt1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAcumOcioGasSurt1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEstadoGasSurt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colColaGasSurt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colInicioOcioGasSurt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAcumOcioGasSurt2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEstadoGasSurt3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colColaGasSurt3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colInicioOcioGasSurt3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAcumOcioGasSurt3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAcumOcioGasSurt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAcumCombIngresados = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAcumGasIngresaron = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAcumCombRechazados = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -195,29 +218,29 @@
             this.grbEstadisticas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grbEstadisticas.Controls.Add(this.label44);
-            this.grbEstadisticas.Controls.Add(this.textBox13);
+            this.grbEstadisticas.Controls.Add(this.txtTiempoPromEsperaVehi);
             this.grbEstadisticas.Controls.Add(this.label43);
-            this.grbEstadisticas.Controls.Add(this.textBox12);
+            this.grbEstadisticas.Controls.Add(this.txtPromTiempoOcioSurt);
             this.grbEstadisticas.Controls.Add(this.label42);
-            this.grbEstadisticas.Controls.Add(this.textBox11);
+            this.grbEstadisticas.Controls.Add(this.txtPorcenAutosAtendidos);
             this.grbEstadisticas.Controls.Add(this.label41);
             this.grbEstadisticas.Controls.Add(this.txtTotalRechazados);
             this.grbEstadisticas.Controls.Add(this.label40);
             this.grbEstadisticas.Controls.Add(this.txtTotalIngresados);
             this.grbEstadisticas.Controls.Add(this.label37);
             this.grbEstadisticas.Controls.Add(this.label38);
-            this.grbEstadisticas.Controls.Add(this.textBox7);
-            this.grbEstadisticas.Controls.Add(this.textBox8);
+            this.grbEstadisticas.Controls.Add(this.txtTiempoPromEsperaVehiGas);
+            this.grbEstadisticas.Controls.Add(this.txtTiempoPromEsperaVehiComb);
             this.grbEstadisticas.Controls.Add(this.label39);
             this.grbEstadisticas.Controls.Add(this.label34);
             this.grbEstadisticas.Controls.Add(this.label35);
-            this.grbEstadisticas.Controls.Add(this.textBox5);
-            this.grbEstadisticas.Controls.Add(this.textBox6);
+            this.grbEstadisticas.Controls.Add(this.txtPromTiempoOcioSurtGas);
+            this.grbEstadisticas.Controls.Add(this.txtPromTiempoOcioSurtComb);
             this.grbEstadisticas.Controls.Add(this.label36);
             this.grbEstadisticas.Controls.Add(this.label31);
             this.grbEstadisticas.Controls.Add(this.label32);
-            this.grbEstadisticas.Controls.Add(this.textBox3);
-            this.grbEstadisticas.Controls.Add(this.textBox4);
+            this.grbEstadisticas.Controls.Add(this.txtPorcenAutosGasAtendidos);
+            this.grbEstadisticas.Controls.Add(this.txtPorcenAutosCombAtendidos);
             this.grbEstadisticas.Controls.Add(this.label33);
             this.grbEstadisticas.Controls.Add(this.label28);
             this.grbEstadisticas.Controls.Add(this.label29);
@@ -245,16 +268,16 @@
             this.label44.TabIndex = 34;
             this.label44.Text = "Total";
             // 
-            // textBox13
+            // txtTiempoPromEsperaVehi
             // 
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(671, 94);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(48, 20);
-            this.textBox13.TabIndex = 14;
-            this.textBox13.Text = "0.00";
-            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTiempoPromEsperaVehi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTiempoPromEsperaVehi.Location = new System.Drawing.Point(671, 94);
+            this.txtTiempoPromEsperaVehi.Name = "txtTiempoPromEsperaVehi";
+            this.txtTiempoPromEsperaVehi.ReadOnly = true;
+            this.txtTiempoPromEsperaVehi.Size = new System.Drawing.Size(48, 20);
+            this.txtTiempoPromEsperaVehi.TabIndex = 14;
+            this.txtTiempoPromEsperaVehi.Text = "0.00";
+            this.txtTiempoPromEsperaVehi.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label43
             // 
@@ -265,16 +288,16 @@
             this.label43.TabIndex = 32;
             this.label43.Text = "Total";
             // 
-            // textBox12
+            // txtPromTiempoOcioSurt
             // 
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(494, 94);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(48, 20);
-            this.textBox12.TabIndex = 11;
-            this.textBox12.Text = "0.00";
-            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPromTiempoOcioSurt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPromTiempoOcioSurt.Location = new System.Drawing.Point(494, 94);
+            this.txtPromTiempoOcioSurt.Name = "txtPromTiempoOcioSurt";
+            this.txtPromTiempoOcioSurt.ReadOnly = true;
+            this.txtPromTiempoOcioSurt.Size = new System.Drawing.Size(48, 20);
+            this.txtPromTiempoOcioSurt.TabIndex = 11;
+            this.txtPromTiempoOcioSurt.Text = "0.00";
+            this.txtPromTiempoOcioSurt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label42
             // 
@@ -285,16 +308,16 @@
             this.label42.TabIndex = 30;
             this.label42.Text = "Total";
             // 
-            // textBox11
+            // txtPorcenAutosAtendidos
             // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(326, 94);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(48, 20);
-            this.textBox11.TabIndex = 8;
-            this.textBox11.Text = "0.00";
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPorcenAutosAtendidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPorcenAutosAtendidos.Location = new System.Drawing.Point(326, 94);
+            this.txtPorcenAutosAtendidos.Name = "txtPorcenAutosAtendidos";
+            this.txtPorcenAutosAtendidos.ReadOnly = true;
+            this.txtPorcenAutosAtendidos.Size = new System.Drawing.Size(48, 20);
+            this.txtPorcenAutosAtendidos.TabIndex = 8;
+            this.txtPorcenAutosAtendidos.Text = "0.00";
+            this.txtPorcenAutosAtendidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label41
             // 
@@ -354,27 +377,27 @@
             this.label38.TabIndex = 23;
             this.label38.Text = "Combustible";
             // 
-            // textBox7
+            // txtTiempoPromEsperaVehiGas
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(671, 68);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(48, 20);
-            this.textBox7.TabIndex = 13;
-            this.textBox7.Text = "0.00";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTiempoPromEsperaVehiGas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTiempoPromEsperaVehiGas.Location = new System.Drawing.Point(671, 68);
+            this.txtTiempoPromEsperaVehiGas.Name = "txtTiempoPromEsperaVehiGas";
+            this.txtTiempoPromEsperaVehiGas.ReadOnly = true;
+            this.txtTiempoPromEsperaVehiGas.Size = new System.Drawing.Size(48, 20);
+            this.txtTiempoPromEsperaVehiGas.TabIndex = 13;
+            this.txtTiempoPromEsperaVehiGas.Text = "0.00";
+            this.txtTiempoPromEsperaVehiGas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox8
+            // txtTiempoPromEsperaVehiComb
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(671, 42);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(48, 20);
-            this.textBox8.TabIndex = 12;
-            this.textBox8.Text = "0.00";
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTiempoPromEsperaVehiComb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTiempoPromEsperaVehiComb.Location = new System.Drawing.Point(671, 42);
+            this.txtTiempoPromEsperaVehiComb.Name = "txtTiempoPromEsperaVehiComb";
+            this.txtTiempoPromEsperaVehiComb.ReadOnly = true;
+            this.txtTiempoPromEsperaVehiComb.Size = new System.Drawing.Size(48, 20);
+            this.txtTiempoPromEsperaVehiComb.TabIndex = 12;
+            this.txtTiempoPromEsperaVehiComb.Text = "0.00";
+            this.txtTiempoPromEsperaVehiComb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label39
             // 
@@ -403,27 +426,27 @@
             this.label35.TabIndex = 18;
             this.label35.Text = "Combustible";
             // 
-            // textBox5
+            // txtPromTiempoOcioSurtGas
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(494, 68);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(48, 20);
-            this.textBox5.TabIndex = 10;
-            this.textBox5.Text = "0.00";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPromTiempoOcioSurtGas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPromTiempoOcioSurtGas.Location = new System.Drawing.Point(494, 68);
+            this.txtPromTiempoOcioSurtGas.Name = "txtPromTiempoOcioSurtGas";
+            this.txtPromTiempoOcioSurtGas.ReadOnly = true;
+            this.txtPromTiempoOcioSurtGas.Size = new System.Drawing.Size(48, 20);
+            this.txtPromTiempoOcioSurtGas.TabIndex = 10;
+            this.txtPromTiempoOcioSurtGas.Text = "0.00";
+            this.txtPromTiempoOcioSurtGas.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox6
+            // txtPromTiempoOcioSurtComb
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(494, 42);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(48, 20);
-            this.textBox6.TabIndex = 9;
-            this.textBox6.Text = "0.00";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPromTiempoOcioSurtComb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPromTiempoOcioSurtComb.Location = new System.Drawing.Point(494, 42);
+            this.txtPromTiempoOcioSurtComb.Name = "txtPromTiempoOcioSurtComb";
+            this.txtPromTiempoOcioSurtComb.ReadOnly = true;
+            this.txtPromTiempoOcioSurtComb.Size = new System.Drawing.Size(48, 20);
+            this.txtPromTiempoOcioSurtComb.TabIndex = 9;
+            this.txtPromTiempoOcioSurtComb.Text = "0.00";
+            this.txtPromTiempoOcioSurtComb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label36
             // 
@@ -452,27 +475,27 @@
             this.label32.TabIndex = 13;
             this.label32.Text = "Comb.";
             // 
-            // textBox3
+            // txtPorcenAutosGasAtendidos
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(326, 68);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(48, 20);
-            this.textBox3.TabIndex = 7;
-            this.textBox3.Text = "0.00";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPorcenAutosGasAtendidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPorcenAutosGasAtendidos.Location = new System.Drawing.Point(326, 68);
+            this.txtPorcenAutosGasAtendidos.Name = "txtPorcenAutosGasAtendidos";
+            this.txtPorcenAutosGasAtendidos.ReadOnly = true;
+            this.txtPorcenAutosGasAtendidos.Size = new System.Drawing.Size(48, 20);
+            this.txtPorcenAutosGasAtendidos.TabIndex = 7;
+            this.txtPorcenAutosGasAtendidos.Text = "0.00";
+            this.txtPorcenAutosGasAtendidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox4
+            // txtPorcenAutosCombAtendidos
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(326, 42);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(48, 20);
-            this.textBox4.TabIndex = 6;
-            this.textBox4.Text = "0.00";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPorcenAutosCombAtendidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPorcenAutosCombAtendidos.Location = new System.Drawing.Point(326, 42);
+            this.txtPorcenAutosCombAtendidos.Name = "txtPorcenAutosCombAtendidos";
+            this.txtPorcenAutosCombAtendidos.ReadOnly = true;
+            this.txtPorcenAutosCombAtendidos.Size = new System.Drawing.Size(48, 20);
+            this.txtPorcenAutosCombAtendidos.TabIndex = 6;
+            this.txtPorcenAutosCombAtendidos.Text = "0.00";
+            this.txtPorcenAutosCombAtendidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label33
             // 
@@ -934,6 +957,7 @@
             this.dgvResultados.AllowUserToAddRows = false;
             this.dgvResultados.AllowUserToDeleteRows = false;
             this.dgvResultados.AllowUserToResizeRows = false;
+            this.dgvResultados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResultados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colEvento,
@@ -958,31 +982,26 @@
             this.colEstadoCombSurt1,
             this.colColaCombSurt1,
             this.colInicioOcioCombSurt1,
-            this.colAcumOcioCombSurt1,
             this.colEstadoCombSurt2,
             this.colColaCombSurt2,
             this.colInicioOcioCombSurt2,
-            this.colAcumOcioCombSurt2,
             this.colEstadoCombSurt3,
             this.colColaCombSurt3,
             this.colInicioOcioCombSurt3,
-            this.colAcumOcioCombSurt3,
             this.colEstadoCombSurt4,
             this.colColaCombSurt4,
             this.colInicioOcioCombSurt4,
-            this.colAcumOcioCombSurt4,
+            this.colAcumOcioCombSurt,
             this.colEstadoGasSurt1,
             this.colColaGasSurt1,
             this.colInicioOcioGasSurt1,
-            this.colAcumOcioGasSurt1,
             this.colEstadoGasSurt2,
             this.colColaGasSurt2,
             this.colInicioOcioGasSurt2,
-            this.colAcumOcioGasSurt2,
             this.colEstadoGasSurt3,
             this.colColaGasSurt3,
             this.colInicioOcioGasSurt3,
-            this.colAcumOcioGasSurt3,
+            this.colAcumOcioGasSurt,
             this.colAcumCombIngresados,
             this.colAcumGasIngresaron,
             this.colAcumCombRechazados,
@@ -1148,131 +1167,178 @@
             this.colReloj.Name = "colReloj";
             this.colReloj.ReadOnly = true;
             this.colReloj.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colReloj.Width = 56;
+            this.colReloj.Width = 37;
             // 
             // colRNDLlegadaComb
             // 
+            dataGridViewCellStyle1.Format = "N2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.colRNDLlegadaComb.DefaultCellStyle = dataGridViewCellStyle1;
             this.colRNDLlegadaComb.HeaderText = "RND Llegada Combustible";
             this.colRNDLlegadaComb.Name = "colRNDLlegadaComb";
             this.colRNDLlegadaComb.ReadOnly = true;
             this.colRNDLlegadaComb.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colRNDLlegadaComb.Width = 92;
+            this.colRNDLlegadaComb.Width = 73;
             // 
             // colTiempoLlegadaComb
             // 
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.colTiempoLlegadaComb.DefaultCellStyle = dataGridViewCellStyle2;
             this.colTiempoLlegadaComb.HeaderText = "Tiempo Llegada Combustible";
             this.colTiempoLlegadaComb.Name = "colTiempoLlegadaComb";
             this.colTiempoLlegadaComb.ReadOnly = true;
             this.colTiempoLlegadaComb.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colTiempoLlegadaComb.Width = 102;
+            this.colTiempoLlegadaComb.Width = 83;
             // 
             // colProxLlegadaComb
             // 
+            dataGridViewCellStyle3.Format = "N2";
+            this.colProxLlegadaComb.DefaultCellStyle = dataGridViewCellStyle3;
             this.colProxLlegadaComb.HeaderText = "Próxima Llegada Combustible";
             this.colProxLlegadaComb.Name = "colProxLlegadaComb";
             this.colProxLlegadaComb.ReadOnly = true;
             this.colProxLlegadaComb.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colProxLlegadaComb.Width = 104;
+            this.colProxLlegadaComb.Width = 85;
             // 
             // colRNDLlegadaGas
             // 
+            dataGridViewCellStyle4.Format = "N2";
+            this.colRNDLlegadaGas.DefaultCellStyle = dataGridViewCellStyle4;
             this.colRNDLlegadaGas.HeaderText = "RND Llegada Gas";
             this.colRNDLlegadaGas.Name = "colRNDLlegadaGas";
             this.colRNDLlegadaGas.ReadOnly = true;
             this.colRNDLlegadaGas.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colRNDLlegadaGas.Width = 85;
+            this.colRNDLlegadaGas.Width = 66;
             // 
             // colTiempoLlegadaGas
             // 
+            dataGridViewCellStyle5.Format = "N2";
+            this.colTiempoLlegadaGas.DefaultCellStyle = dataGridViewCellStyle5;
             this.colTiempoLlegadaGas.HeaderText = "Tiempo Llegada Gas";
             this.colTiempoLlegadaGas.Name = "colTiempoLlegadaGas";
             this.colTiempoLlegadaGas.ReadOnly = true;
             this.colTiempoLlegadaGas.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colTiempoLlegadaGas.Width = 85;
+            this.colTiempoLlegadaGas.Width = 66;
             // 
             // colProxLlegadaGas
             // 
+            dataGridViewCellStyle6.Format = "N2";
+            this.colProxLlegadaGas.DefaultCellStyle = dataGridViewCellStyle6;
             this.colProxLlegadaGas.HeaderText = "Próxima Llegada Gas";
             this.colProxLlegadaGas.Name = "colProxLlegadaGas";
             this.colProxLlegadaGas.ReadOnly = true;
             this.colProxLlegadaGas.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colProxLlegadaGas.Width = 85;
+            this.colProxLlegadaGas.Width = 66;
             // 
             // colRNDFinCombustible
             // 
+            dataGridViewCellStyle7.Format = "N2";
+            this.colRNDFinCombustible.DefaultCellStyle = dataGridViewCellStyle7;
             this.colRNDFinCombustible.HeaderText = "RND Fin Atencion Combustible";
             this.colRNDFinCombustible.Name = "colRNDFinCombustible";
             this.colRNDFinCombustible.ReadOnly = true;
             this.colRNDFinCombustible.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colRNDFinCombustible.Width = 92;
             // 
             // colTiempoFinCombustible
             // 
+            dataGridViewCellStyle8.Format = "N2";
+            this.colTiempoFinCombustible.DefaultCellStyle = dataGridViewCellStyle8;
             this.colTiempoFinCombustible.HeaderText = "Tiempo Fin Atención Combustible";
             this.colTiempoFinCombustible.Name = "colTiempoFinCombustible";
             this.colTiempoFinCombustible.ReadOnly = true;
             this.colTiempoFinCombustible.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colTiempoFinCombustible.Width = 102;
             // 
             // colFinCombustibleServ1
             // 
+            dataGridViewCellStyle9.Format = "N2";
+            this.colFinCombustibleServ1.DefaultCellStyle = dataGridViewCellStyle9;
             this.colFinCombustibleServ1.HeaderText = "Fin Atención Comb. Surt1";
             this.colFinCombustibleServ1.Name = "colFinCombustibleServ1";
             this.colFinCombustibleServ1.ReadOnly = true;
             this.colFinCombustibleServ1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colFinCombustibleServ1.Width = 68;
             // 
             // colFinCombustibleServ2
             // 
+            dataGridViewCellStyle10.Format = "N2";
+            this.colFinCombustibleServ2.DefaultCellStyle = dataGridViewCellStyle10;
             this.colFinCombustibleServ2.HeaderText = "Fin Atención Comb. Surt2";
             this.colFinCombustibleServ2.Name = "colFinCombustibleServ2";
             this.colFinCombustibleServ2.ReadOnly = true;
             this.colFinCombustibleServ2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colFinCombustibleServ2.Width = 68;
             // 
             // colFinCombustibleServ3
             // 
+            dataGridViewCellStyle11.Format = "N2";
+            this.colFinCombustibleServ3.DefaultCellStyle = dataGridViewCellStyle11;
             this.colFinCombustibleServ3.HeaderText = "Fin Atención Comb. Surt3";
             this.colFinCombustibleServ3.Name = "colFinCombustibleServ3";
             this.colFinCombustibleServ3.ReadOnly = true;
             this.colFinCombustibleServ3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colFinCombustibleServ3.Width = 68;
             // 
             // colFinCombustibleServ4
             // 
+            dataGridViewCellStyle12.Format = "N2";
+            this.colFinCombustibleServ4.DefaultCellStyle = dataGridViewCellStyle12;
             this.colFinCombustibleServ4.HeaderText = "Fin Atención Comb. Surt4";
             this.colFinCombustibleServ4.Name = "colFinCombustibleServ4";
             this.colFinCombustibleServ4.ReadOnly = true;
             this.colFinCombustibleServ4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colFinCombustibleServ4.Width = 68;
             // 
             // colRNDFinGas
             // 
+            dataGridViewCellStyle13.Format = "N2";
+            this.colRNDFinGas.DefaultCellStyle = dataGridViewCellStyle13;
             this.colRNDFinGas.HeaderText = "RND Fin Atención Gas";
             this.colRNDFinGas.Name = "colRNDFinGas";
             this.colRNDFinGas.ReadOnly = true;
             this.colRNDFinGas.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colRNDFinGas.Width = 69;
             // 
             // colTiempoFinGas
             // 
+            dataGridViewCellStyle14.Format = "N2";
+            this.colTiempoFinGas.DefaultCellStyle = dataGridViewCellStyle14;
             this.colTiempoFinGas.HeaderText = "Tiempo Fin Atención Gas";
             this.colTiempoFinGas.Name = "colTiempoFinGas";
             this.colTiempoFinGas.ReadOnly = true;
+            this.colTiempoFinGas.Width = 80;
             // 
             // colFinGasServ1
             // 
+            dataGridViewCellStyle15.Format = "N2";
+            this.colFinGasServ1.DefaultCellStyle = dataGridViewCellStyle15;
             this.colFinGasServ1.HeaderText = "Fin Atención Gas Surt1";
             this.colFinGasServ1.Name = "colFinGasServ1";
             this.colFinGasServ1.ReadOnly = true;
             this.colFinGasServ1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colFinGasServ1.Width = 68;
             // 
             // colFinGasServ2
             // 
+            dataGridViewCellStyle16.Format = "N2";
+            this.colFinGasServ2.DefaultCellStyle = dataGridViewCellStyle16;
             this.colFinGasServ2.HeaderText = "Fin Atención Gas Surt2";
             this.colFinGasServ2.Name = "colFinGasServ2";
             this.colFinGasServ2.ReadOnly = true;
             this.colFinGasServ2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colFinGasServ2.Width = 68;
             // 
             // colFinGasServ3
             // 
+            dataGridViewCellStyle17.Format = "N2";
+            this.colFinGasServ3.DefaultCellStyle = dataGridViewCellStyle17;
             this.colFinGasServ3.HeaderText = "Fin Atención Gas Surt3";
             this.colFinGasServ3.Name = "colFinGasServ3";
             this.colFinGasServ3.ReadOnly = true;
             this.colFinGasServ3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colFinGasServ3.Width = 68;
             // 
             // colEstadoCombSurt1
             // 
@@ -1280,6 +1346,7 @@
             this.colEstadoCombSurt1.Name = "colEstadoCombSurt1";
             this.colEstadoCombSurt1.ReadOnly = true;
             this.colEstadoCombSurt1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colEstadoCombSurt1.Width = 64;
             // 
             // colColaCombSurt1
             // 
@@ -1287,20 +1354,17 @@
             this.colColaCombSurt1.Name = "colColaCombSurt1";
             this.colColaCombSurt1.ReadOnly = true;
             this.colColaCombSurt1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colColaCombSurt1.Width = 63;
             // 
             // colInicioOcioCombSurt1
             // 
+            dataGridViewCellStyle18.Format = "N2";
+            this.colInicioOcioCombSurt1.DefaultCellStyle = dataGridViewCellStyle18;
             this.colInicioOcioCombSurt1.HeaderText = "Inicio Ocio Comb. Surt1";
             this.colInicioOcioCombSurt1.Name = "colInicioOcioCombSurt1";
             this.colInicioOcioCombSurt1.ReadOnly = true;
             this.colInicioOcioCombSurt1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colAcumOcioCombSurt1
-            // 
-            this.colAcumOcioCombSurt1.HeaderText = "Tiempo Ocio Acum Comb. Surt1";
-            this.colAcumOcioCombSurt1.Name = "colAcumOcioCombSurt1";
-            this.colAcumOcioCombSurt1.ReadOnly = true;
-            this.colAcumOcioCombSurt1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colInicioOcioCombSurt1.Width = 57;
             // 
             // colEstadoCombSurt2
             // 
@@ -1308,6 +1372,7 @@
             this.colEstadoCombSurt2.Name = "colEstadoCombSurt2";
             this.colEstadoCombSurt2.ReadOnly = true;
             this.colEstadoCombSurt2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colEstadoCombSurt2.Width = 64;
             // 
             // colColaCombSurt2
             // 
@@ -1315,20 +1380,17 @@
             this.colColaCombSurt2.Name = "colColaCombSurt2";
             this.colColaCombSurt2.ReadOnly = true;
             this.colColaCombSurt2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colColaCombSurt2.Width = 63;
             // 
             // colInicioOcioCombSurt2
             // 
+            dataGridViewCellStyle19.Format = "N2";
+            this.colInicioOcioCombSurt2.DefaultCellStyle = dataGridViewCellStyle19;
             this.colInicioOcioCombSurt2.HeaderText = "Inicio Ocio Comb. Surt2";
             this.colInicioOcioCombSurt2.Name = "colInicioOcioCombSurt2";
             this.colInicioOcioCombSurt2.ReadOnly = true;
             this.colInicioOcioCombSurt2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colAcumOcioCombSurt2
-            // 
-            this.colAcumOcioCombSurt2.HeaderText = "Tiempo Ocio Acum Comb. Surt2";
-            this.colAcumOcioCombSurt2.Name = "colAcumOcioCombSurt2";
-            this.colAcumOcioCombSurt2.ReadOnly = true;
-            this.colAcumOcioCombSurt2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colInicioOcioCombSurt2.Width = 57;
             // 
             // colEstadoCombSurt3
             // 
@@ -1336,6 +1398,7 @@
             this.colEstadoCombSurt3.Name = "colEstadoCombSurt3";
             this.colEstadoCombSurt3.ReadOnly = true;
             this.colEstadoCombSurt3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colEstadoCombSurt3.Width = 64;
             // 
             // colColaCombSurt3
             // 
@@ -1343,20 +1406,17 @@
             this.colColaCombSurt3.Name = "colColaCombSurt3";
             this.colColaCombSurt3.ReadOnly = true;
             this.colColaCombSurt3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colColaCombSurt3.Width = 63;
             // 
             // colInicioOcioCombSurt3
             // 
+            dataGridViewCellStyle20.Format = "N2";
+            this.colInicioOcioCombSurt3.DefaultCellStyle = dataGridViewCellStyle20;
             this.colInicioOcioCombSurt3.HeaderText = "Inicio Ocio Comb. Surt3";
             this.colInicioOcioCombSurt3.Name = "colInicioOcioCombSurt3";
             this.colInicioOcioCombSurt3.ReadOnly = true;
             this.colInicioOcioCombSurt3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colAcumOcioCombSurt3
-            // 
-            this.colAcumOcioCombSurt3.HeaderText = "Tiempo Ocio Acum Comb. Surt3";
-            this.colAcumOcioCombSurt3.Name = "colAcumOcioCombSurt3";
-            this.colAcumOcioCombSurt3.ReadOnly = true;
-            this.colAcumOcioCombSurt3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colInicioOcioCombSurt3.Width = 57;
             // 
             // colEstadoCombSurt4
             // 
@@ -1364,6 +1424,7 @@
             this.colEstadoCombSurt4.Name = "colEstadoCombSurt4";
             this.colEstadoCombSurt4.ReadOnly = true;
             this.colEstadoCombSurt4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colEstadoCombSurt4.Width = 64;
             // 
             // colColaCombSurt4
             // 
@@ -1371,20 +1432,27 @@
             this.colColaCombSurt4.Name = "colColaCombSurt4";
             this.colColaCombSurt4.ReadOnly = true;
             this.colColaCombSurt4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colColaCombSurt4.Width = 63;
             // 
             // colInicioOcioCombSurt4
             // 
+            dataGridViewCellStyle21.Format = "N2";
+            this.colInicioOcioCombSurt4.DefaultCellStyle = dataGridViewCellStyle21;
             this.colInicioOcioCombSurt4.HeaderText = "Inicio Ocio Comb. Surt4";
             this.colInicioOcioCombSurt4.Name = "colInicioOcioCombSurt4";
             this.colInicioOcioCombSurt4.ReadOnly = true;
             this.colInicioOcioCombSurt4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colInicioOcioCombSurt4.Width = 57;
             // 
-            // colAcumOcioCombSurt4
+            // colAcumOcioCombSurt
             // 
-            this.colAcumOcioCombSurt4.HeaderText = "Tiempo Ocio Acum Comb. Surt4";
-            this.colAcumOcioCombSurt4.Name = "colAcumOcioCombSurt4";
-            this.colAcumOcioCombSurt4.ReadOnly = true;
-            this.colAcumOcioCombSurt4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            dataGridViewCellStyle22.Format = "N2";
+            this.colAcumOcioCombSurt.DefaultCellStyle = dataGridViewCellStyle22;
+            this.colAcumOcioCombSurt.HeaderText = "Tiempo Ocio Acum Surt. Comb. ";
+            this.colAcumOcioCombSurt.Name = "colAcumOcioCombSurt";
+            this.colAcumOcioCombSurt.ReadOnly = true;
+            this.colAcumOcioCombSurt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colAcumOcioCombSurt.Width = 61;
             // 
             // colEstadoGasSurt1
             // 
@@ -1392,6 +1460,7 @@
             this.colEstadoGasSurt1.Name = "colEstadoGasSurt1";
             this.colEstadoGasSurt1.ReadOnly = true;
             this.colEstadoGasSurt1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colEstadoGasSurt1.Width = 54;
             // 
             // colColaGasSurt1
             // 
@@ -1399,20 +1468,17 @@
             this.colColaGasSurt1.Name = "colColaGasSurt1";
             this.colColaGasSurt1.ReadOnly = true;
             this.colColaGasSurt1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colColaGasSurt1.Width = 53;
             // 
             // colInicioOcioGasSurt1
             // 
+            dataGridViewCellStyle23.Format = "N2";
+            this.colInicioOcioGasSurt1.DefaultCellStyle = dataGridViewCellStyle23;
             this.colInicioOcioGasSurt1.HeaderText = "Inicio Ocio Gas Surt1";
             this.colInicioOcioGasSurt1.Name = "colInicioOcioGasSurt1";
             this.colInicioOcioGasSurt1.ReadOnly = true;
             this.colInicioOcioGasSurt1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colAcumOcioGasSurt1
-            // 
-            this.colAcumOcioGasSurt1.HeaderText = "Tiempo Ocio Acum Gas Surt1";
-            this.colAcumOcioGasSurt1.Name = "colAcumOcioGasSurt1";
-            this.colAcumOcioGasSurt1.ReadOnly = true;
-            this.colAcumOcioGasSurt1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colInicioOcioGasSurt1.Width = 51;
             // 
             // colEstadoGasSurt2
             // 
@@ -1420,6 +1486,7 @@
             this.colEstadoGasSurt2.Name = "colEstadoGasSurt2";
             this.colEstadoGasSurt2.ReadOnly = true;
             this.colEstadoGasSurt2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colEstadoGasSurt2.Width = 54;
             // 
             // colColaGasSurt2
             // 
@@ -1427,20 +1494,17 @@
             this.colColaGasSurt2.Name = "colColaGasSurt2";
             this.colColaGasSurt2.ReadOnly = true;
             this.colColaGasSurt2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colColaGasSurt2.Width = 53;
             // 
             // colInicioOcioGasSurt2
             // 
+            dataGridViewCellStyle24.Format = "N2";
+            this.colInicioOcioGasSurt2.DefaultCellStyle = dataGridViewCellStyle24;
             this.colInicioOcioGasSurt2.HeaderText = "Inicio Ocio Gas Surt2";
             this.colInicioOcioGasSurt2.Name = "colInicioOcioGasSurt2";
             this.colInicioOcioGasSurt2.ReadOnly = true;
             this.colInicioOcioGasSurt2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colAcumOcioGasSurt2
-            // 
-            this.colAcumOcioGasSurt2.HeaderText = "Tiempo Ocio Acum Gas Surt2";
-            this.colAcumOcioGasSurt2.Name = "colAcumOcioGasSurt2";
-            this.colAcumOcioGasSurt2.ReadOnly = true;
-            this.colAcumOcioGasSurt2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colInicioOcioGasSurt2.Width = 51;
             // 
             // colEstadoGasSurt3
             // 
@@ -1448,6 +1512,7 @@
             this.colEstadoGasSurt3.Name = "colEstadoGasSurt3";
             this.colEstadoGasSurt3.ReadOnly = true;
             this.colEstadoGasSurt3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colEstadoGasSurt3.Width = 54;
             // 
             // colColaGasSurt3
             // 
@@ -1455,76 +1520,95 @@
             this.colColaGasSurt3.Name = "colColaGasSurt3";
             this.colColaGasSurt3.ReadOnly = true;
             this.colColaGasSurt3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colColaGasSurt3.Width = 53;
             // 
             // colInicioOcioGasSurt3
             // 
+            dataGridViewCellStyle25.Format = "N2";
+            this.colInicioOcioGasSurt3.DefaultCellStyle = dataGridViewCellStyle25;
             this.colInicioOcioGasSurt3.HeaderText = "Inicio Ocio Gas Surt3";
             this.colInicioOcioGasSurt3.Name = "colInicioOcioGasSurt3";
             this.colInicioOcioGasSurt3.ReadOnly = true;
             this.colInicioOcioGasSurt3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colInicioOcioGasSurt3.Width = 51;
             // 
-            // colAcumOcioGasSurt3
+            // colAcumOcioGasSurt
             // 
-            this.colAcumOcioGasSurt3.HeaderText = "Tiempo Ocio Acum Gas Surt3";
-            this.colAcumOcioGasSurt3.Name = "colAcumOcioGasSurt3";
-            this.colAcumOcioGasSurt3.ReadOnly = true;
-            this.colAcumOcioGasSurt3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            dataGridViewCellStyle26.Format = "N2";
+            this.colAcumOcioGasSurt.DefaultCellStyle = dataGridViewCellStyle26;
+            this.colAcumOcioGasSurt.HeaderText = "Tiempo Ocio Acum Surt. Gas";
+            this.colAcumOcioGasSurt.Name = "colAcumOcioGasSurt";
+            this.colAcumOcioGasSurt.ReadOnly = true;
+            this.colAcumOcioGasSurt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colAcumOcioGasSurt.Width = 51;
             // 
             // colAcumCombIngresados
             // 
-            this.colAcumCombIngresados.HeaderText = "Acum Ingresaron Comb.";
+            this.colAcumCombIngresados.HeaderText = "Cont. Ingresaron Comb.";
             this.colAcumCombIngresados.Name = "colAcumCombIngresados";
             this.colAcumCombIngresados.ReadOnly = true;
             this.colAcumCombIngresados.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colAcumCombIngresados.Width = 85;
             // 
             // colAcumGasIngresaron
             // 
-            this.colAcumGasIngresaron.HeaderText = "Acum Ingresaron Gas";
+            this.colAcumGasIngresaron.HeaderText = "Cont. Ingresaron Gas";
             this.colAcumGasIngresaron.Name = "colAcumGasIngresaron";
             this.colAcumGasIngresaron.ReadOnly = true;
             this.colAcumGasIngresaron.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colAcumGasIngresaron.Width = 77;
             // 
             // colAcumCombRechazados
             // 
-            this.colAcumCombRechazados.HeaderText = "Acum. Rechazados Comb.";
+            this.colAcumCombRechazados.HeaderText = "Cont. Rechazados Comb.";
             this.colAcumCombRechazados.Name = "colAcumCombRechazados";
             this.colAcumCombRechazados.ReadOnly = true;
             this.colAcumCombRechazados.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colAcumCombRechazados.Width = 94;
             // 
             // colAcumGasRechazados
             // 
-            this.colAcumGasRechazados.HeaderText = "Acum. Rechazados Gas";
+            this.colAcumGasRechazados.HeaderText = "Cont. Rechazados Gas";
             this.colAcumGasRechazados.Name = "colAcumGasRechazados";
             this.colAcumGasRechazados.ReadOnly = true;
             this.colAcumGasRechazados.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colAcumGasRechazados.Width = 94;
             // 
             // colAcumCombAtendidos
             // 
-            this.colAcumCombAtendidos.HeaderText = "Acum. Atendidos Comb.";
+            this.colAcumCombAtendidos.HeaderText = "Cont. Atendidos Comb.";
             this.colAcumCombAtendidos.Name = "colAcumCombAtendidos";
             this.colAcumCombAtendidos.ReadOnly = true;
             this.colAcumCombAtendidos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colAcumCombAtendidos.Width = 82;
             // 
             // colAcumGasAtendidos
             // 
-            this.colAcumGasAtendidos.HeaderText = "Acum. Atendidos Gas";
+            this.colAcumGasAtendidos.HeaderText = "Cont. Atendidos Gas";
             this.colAcumGasAtendidos.Name = "colAcumGasAtendidos";
             this.colAcumGasAtendidos.ReadOnly = true;
             this.colAcumGasAtendidos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colAcumGasAtendidos.Width = 74;
             // 
             // colAcumTiempoEsperaComb
             // 
+            dataGridViewCellStyle27.Format = "N2";
+            this.colAcumTiempoEsperaComb.DefaultCellStyle = dataGridViewCellStyle27;
             this.colAcumTiempoEsperaComb.HeaderText = "Acum. Espera Comb.";
             this.colAcumTiempoEsperaComb.Name = "colAcumTiempoEsperaComb";
             this.colAcumTiempoEsperaComb.ReadOnly = true;
             this.colAcumTiempoEsperaComb.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colAcumTiempoEsperaComb.Width = 74;
             // 
             // colAcumTiempoEsperaGas
             // 
+            dataGridViewCellStyle28.Format = "N2";
+            this.colAcumTiempoEsperaGas.DefaultCellStyle = dataGridViewCellStyle28;
             this.colAcumTiempoEsperaGas.HeaderText = "Acum. Espera Gas";
             this.colAcumTiempoEsperaGas.Name = "colAcumTiempoEsperaGas";
             this.colAcumTiempoEsperaGas.ReadOnly = true;
             this.colAcumTiempoEsperaGas.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colAcumTiempoEsperaGas.Width = 61;
             // 
             // frm_principal
             // 
@@ -1609,29 +1693,29 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtTiempoPromEsperaVehi;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtPromTiempoOcioSurt;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtPorcenAutosAtendidos;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.TextBox txtTotalRechazados;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.TextBox txtTotalIngresados;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtTiempoPromEsperaVehiGas;
+        private System.Windows.Forms.TextBox txtTiempoPromEsperaVehiComb;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtPromTiempoOcioSurtGas;
+        private System.Windows.Forms.TextBox txtPromTiempoOcioSurtComb;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtPorcenAutosGasAtendidos;
+        private System.Windows.Forms.TextBox txtPorcenAutosCombAtendidos;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
@@ -1660,31 +1744,26 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colEstadoCombSurt1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colColaCombSurt1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colInicioOcioCombSurt1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAcumOcioCombSurt1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEstadoCombSurt2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colColaCombSurt2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colInicioOcioCombSurt2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAcumOcioCombSurt2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEstadoCombSurt3;
         private System.Windows.Forms.DataGridViewTextBoxColumn colColaCombSurt3;
         private System.Windows.Forms.DataGridViewTextBoxColumn colInicioOcioCombSurt3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAcumOcioCombSurt3;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEstadoCombSurt4;
         private System.Windows.Forms.DataGridViewTextBoxColumn colColaCombSurt4;
         private System.Windows.Forms.DataGridViewTextBoxColumn colInicioOcioCombSurt4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAcumOcioCombSurt4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAcumOcioCombSurt;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEstadoGasSurt1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colColaGasSurt1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colInicioOcioGasSurt1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAcumOcioGasSurt1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEstadoGasSurt2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colColaGasSurt2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colInicioOcioGasSurt2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAcumOcioGasSurt2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEstadoGasSurt3;
         private System.Windows.Forms.DataGridViewTextBoxColumn colColaGasSurt3;
         private System.Windows.Forms.DataGridViewTextBoxColumn colInicioOcioGasSurt3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAcumOcioGasSurt3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAcumOcioGasSurt;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAcumCombIngresados;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAcumGasIngresaron;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAcumCombRechazados;

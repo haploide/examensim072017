@@ -11,19 +11,20 @@ namespace EstacionServicio
         private double demora;
         private double proximoFin;
         private string nombreEvento = "fin_carga_gas";
-        private Random random = new Random();
+        private Random random;
         private double desde;
         private double hasta;
-        private string idSurtidor;
+        private int idSurtidor;
         private double cteDemora;
 
 
-        public FinServicioGas(double a, double b, string id, double cte)
+        public FinServicioGas(double a, double b, int id, double cte, Random random)
         {
             desde = a;
             hasta = b;
             idSurtidor = id;
             cteDemora = cte;
+            this.random = random;
         }
 
         public override string getNombreEvento()
@@ -31,7 +32,7 @@ namespace EstacionServicio
             return nombreEvento;
         }
 
-        public string getIdSurtidor()
+        public int getIdSurtidor()
         {
             return idSurtidor;
         }

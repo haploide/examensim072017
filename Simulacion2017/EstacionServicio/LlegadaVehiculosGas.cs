@@ -7,16 +7,17 @@ namespace EstacionServicio
 {
     class LlegadaVehiculosGas : Evento
     {
-        private double rndTiempo;
+        private double rndTiempoGas;
         private double tiempoEntreLlegadas;
         private double proximaLlegada;
         private string nombreEvento = "llegada_gas";
-        private Random random = new Random();
+        private static Random randomGas;
         private double mu;
         
-        public LlegadaVehiculosGas(double mu)
+        public LlegadaVehiculosGas(double mu, Random random)
         {
             this.mu = mu;
+            randomGas = random;
         }
         public override string getNombreEvento()
         {
@@ -24,7 +25,7 @@ namespace EstacionServicio
         }
         public double getRandom()
         {
-            return rndTiempo;
+            return rndTiempoGas;
         }
         public double getTiempoEntreLlegada()
         {
@@ -37,8 +38,8 @@ namespace EstacionServicio
 
         public override void simular(double reloj)
         {
-            rndTiempo = random.NextDouble();
-            tiempoEntreLlegadas = Distribuciones.Exponencial(mu, rndTiempo);
+            rndTiempoGas = randomGas.NextDouble();
+            tiempoEntreLlegadas = Distribuciones.Exponencial(mu, rndTiempoGas);
             proximaLlegada = tiempoEntreLlegadas + reloj;
         }
     }

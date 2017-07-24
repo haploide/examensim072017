@@ -6,18 +6,18 @@ using static EstacionServicio.Estados;
 
 namespace EstacionServicio
 {
-    public abstract class Surtidor
+    public class Surtidor
     {
         private _EstadoSurtidor estado;
         private _TipoServicio tipoServicio;
-        private string idSurtidor;
+        private int idSurtidor;
         private Queue<Vehiculo> cola;
         private double horaInicioOcio;
         private double acumTiempoOcio;
         private string nombreEstado;
 
 
-        public Surtidor(string id, _TipoServicio tipo, double horaInicioOcio, string nombre)
+        public Surtidor(int id, _TipoServicio tipo, double horaInicioOcio, string nombre)
         {
             estado = _EstadoSurtidor.Libre;
             tipoServicio = tipo;
@@ -57,12 +57,12 @@ namespace EstacionServicio
             return cola.Count;
         }
 
-        public void setIdSurtidor(string id)
+        public void setIdSurtidor(int id)
         {
             this.idSurtidor = id;
         }
 
-        public string getIdSurtidor()
+        public int getIdSurtidor()
         {
             return idSurtidor;
         }
