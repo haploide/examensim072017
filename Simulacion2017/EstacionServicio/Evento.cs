@@ -9,7 +9,7 @@ namespace EstacionServicio
     {
         public abstract double getProximaLlegada();
         public abstract string getNombreEvento();
-        public abstract void simular(double reloj);
+        public abstract void simular(double reloj, double random);
 
         public int CompareTo(Evento otroEvento)
         {

@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+
 
 namespace EstacionServicio
 {
@@ -11,14 +9,13 @@ namespace EstacionServicio
         private double tiempoEntreLlegadas;
         private double proximaLlegada;
         private string nombreEvento = "llegada_combustible";
-        private Random randomCombustible;
         private double mu;
 
 
-        public LlegadaVehiculosCombustible(double mu, Random random)
+        public LlegadaVehiculosCombustible(double mu)
         {
             this.mu = mu;
-            randomCombustible = random;
+            
         }
         public override string getNombreEvento()
         {
@@ -38,9 +35,10 @@ namespace EstacionServicio
             return proximaLlegada;
         }
 
-        public override void simular(double reloj)
+        public override void simular(double reloj, double random)
         {
-            rndTiempoCombustible = randomCombustible.NextDouble();
+            
+            rndTiempoCombustible = random;
             tiempoEntreLlegadas = Distribuciones.Exponencial(mu, rndTiempoCombustible);
             proximaLlegada = tiempoEntreLlegadas + reloj;
         }

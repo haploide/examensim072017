@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+
 namespace EstacionServicio
 {
     class FinServicioGas : Evento
@@ -11,20 +12,19 @@ namespace EstacionServicio
         private double demora;
         private double proximoFin;
         private string nombreEvento = "fin_carga_gas";
-        private Random random;
         private double desde;
         private double hasta;
         private int idSurtidor;
         private double cteDemora;
 
 
-        public FinServicioGas(double a, double b, int id, double cte, Random random)
+        public FinServicioGas(double a, double b, int id, double cte)
         {
             desde = a;
             hasta = b;
             idSurtidor = id;
             cteDemora = cte;
-            this.random = random;
+            
         }
 
         public override string getNombreEvento()
@@ -53,9 +53,9 @@ namespace EstacionServicio
             return proximoFin;
         }
 
-        public override void simular(double reloj)
+        public override void simular(double reloj, double random)
         {
-            rndTiempo = random.NextDouble();
+            rndTiempo = random;
             demora = (Distribuciones.Uniforme(desde, hasta, rndTiempo)+cteDemora);
             proximoFin = demora + reloj;
         }
