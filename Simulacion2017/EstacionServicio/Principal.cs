@@ -2166,10 +2166,10 @@ namespace EstacionServicio
 
         private void btnReset_Click(object sender, EventArgs e)//Advertencia de que se perderan los datos con el reset
         {
-            //if (MessageBox.Show("¿Está seguro que desea Reiniciar?\n\nSe Perderán los cambios realizados", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
-            //{
+            if (MessageBox.Show("¿Está seguro que desea Reiniciar?\n\nSe Perderán los cambios realizados", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
+            {
             reset();
-            //}
+            }
         }
         private void reset()
         {
