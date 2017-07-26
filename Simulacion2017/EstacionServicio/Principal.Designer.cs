@@ -1558,6 +1558,7 @@
             // txtNEventosMostrar
             // 
             this.txtNEventosMostrar.Location = new System.Drawing.Point(509, 18);
+            this.txtNEventosMostrar.MaxLength = 3;
             this.txtNEventosMostrar.Name = "txtNEventosMostrar";
             this.txtNEventosMostrar.Size = new System.Drawing.Size(48, 20);
             this.txtNEventosMostrar.TabIndex = 2;
@@ -1587,6 +1588,7 @@
             // txtMinDesde
             // 
             this.txtMinDesde.Location = new System.Drawing.Point(284, 18);
+            this.txtMinDesde.MaxLength = 6;
             this.txtMinDesde.Name = "txtMinDesde";
             this.txtMinDesde.Size = new System.Drawing.Size(48, 20);
             this.txtMinDesde.TabIndex = 1;

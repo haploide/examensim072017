@@ -63,10 +63,18 @@ namespace EstacionServicio
         private double relojSimulacion;
         private int identificadorVehiculo;
         private int eventosYaSimuladosYMostrados;
-        //private List<double> listaRandom = new List<double>();
         Random rand = new Random((int)DateTime.Now.Ticks);
         bool resul = true;
         TextBox invalido = null;
+
+        //Creacion de Variables Auxiliares
+        Vehiculo vehiculoActualSurtComb1 = null;
+        Vehiculo vehiculoActualSurtComb2 = null;
+        Vehiculo vehiculoActualSurtComb3 = null;
+        Vehiculo vehiculoActualSurtComb4 = null;
+        Vehiculo vehiculoActualSurtGas1 = null;
+        Vehiculo vehiculoActualSurtGas2 = null;
+        Vehiculo vehiculoActualSurtGas3 = null;
 
 
 
@@ -138,15 +146,6 @@ namespace EstacionServicio
                 SurtidorGas3 = new Surtidor(3, _TipoServicio.Gas, 0.00, "Libre");
 
 
-                //Creacion de Variables Auxiliares
-                Vehiculo vehiculoActualSurtComb1 = null;
-                Vehiculo vehiculoActualSurtComb2 = null;
-                Vehiculo vehiculoActualSurtComb3 = null;
-                Vehiculo vehiculoActualSurtComb4 = null;
-                Vehiculo vehiculoActualSurtGas1 = null;
-                Vehiculo vehiculoActualSurtGas2 = null;
-                Vehiculo vehiculoActualSurtGas3 = null;
-
                 //bloqueo el boton simular para obligar a resetear antes de una nueva simulacion
                 btnSimular.Enabled = false;
 
@@ -195,6 +194,9 @@ namespace EstacionServicio
                     {
                         int i = 0;
                         identificadorVehiculo++;
+
+
+
                         llegadaVehiculoCombustible.simular(relojSimulacion, rand.NextDouble());
 
                         if (SurtidorCombustible1.Estado == _EstadoSurtidor.Libre || SurtidorCombustible2.Estado == _EstadoSurtidor.Libre || SurtidorCombustible3.Estado == _EstadoSurtidor.Libre || SurtidorCombustible4.Estado == _EstadoSurtidor.Libre)//Busco un surtidor libre
@@ -215,6 +217,9 @@ namespace EstacionServicio
                                 {
 
                                     i = dgvResultados.Rows.Add();
+
+                                    
+
                                     agregarEventoAGrilla(i, true, llegadaVehiculoCombustible, 0);
                                     agregarEventoAGrilla(i, false, llegadaVehiculoGas, 0);
                                     agregarDatosAGrila(i, ((LlegadaVehiculosCombustible)siguienteEvento).getNombreEvento());
@@ -227,12 +232,17 @@ namespace EstacionServicio
                                     agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                     agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                   
+
                                     dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGreen;
 
 
                                     try
                                     {
-                                        dgvResultados.Rows[i - 1].Cells["colProxLlegadaComb"].Style.BackColor = Color.LightBlue;
+                                        if ((i - 1) >= 0)
+                                        {
+                                            dgvResultados.Rows[i - 1].Cells["colProxLlegadaComb"].Style.BackColor = Color.LightBlue;
+                                        }
                                     }
                                     catch (ArgumentOutOfRangeException)
                                     {
@@ -259,6 +269,9 @@ namespace EstacionServicio
                                 {
 
                                     i = dgvResultados.Rows.Add();
+
+                                    
+
                                     agregarEventoAGrilla(i, true, llegadaVehiculoCombustible, 0);
                                     agregarEventoAGrilla(i, false, llegadaVehiculoGas, 0);
                                     agregarDatosAGrila(i, ((LlegadaVehiculosCombustible)siguienteEvento).getNombreEvento());
@@ -271,11 +284,16 @@ namespace EstacionServicio
                                     agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                     agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                    
+
                                     dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGreen;
 
                                     try
                                     {
-                                        dgvResultados.Rows[i - 1].Cells["colProxLlegadaComb"].Style.BackColor = Color.LightBlue;
+                                        if ((i - 1) >= 0)
+                                        {
+                                            dgvResultados.Rows[i - 1].Cells["colProxLlegadaComb"].Style.BackColor = Color.LightBlue;
+                                        }
                                     }
                                     catch (ArgumentOutOfRangeException)
                                     {
@@ -303,6 +321,9 @@ namespace EstacionServicio
                                 {
 
                                     i = dgvResultados.Rows.Add();
+
+                                    
+
                                     agregarEventoAGrilla(i, true, llegadaVehiculoCombustible, 0);
                                     agregarEventoAGrilla(i, false, llegadaVehiculoGas, 0);
                                     agregarDatosAGrila(i, ((LlegadaVehiculosCombustible)siguienteEvento).getNombreEvento());
@@ -315,11 +336,16 @@ namespace EstacionServicio
                                     agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                     agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                    
+
                                     dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGreen;
 
                                     try
                                     {
-                                        dgvResultados.Rows[i - 1].Cells["colProxLlegadaComb"].Style.BackColor = Color.LightBlue;
+                                        if ((i - 1) >= 0)
+                                        {
+                                            dgvResultados.Rows[i - 1].Cells["colProxLlegadaComb"].Style.BackColor = Color.LightBlue;
+                                        }
                                     }
                                     catch (ArgumentOutOfRangeException)
                                     {
@@ -346,6 +372,9 @@ namespace EstacionServicio
                                 {
 
                                     i = dgvResultados.Rows.Add();
+
+                                    
+
                                     agregarEventoAGrilla(i, true, llegadaVehiculoCombustible, 0);
                                     agregarEventoAGrilla(i, false, llegadaVehiculoGas, 0);
                                     agregarDatosAGrila(i, ((LlegadaVehiculosCombustible)siguienteEvento).getNombreEvento());
@@ -358,11 +387,16 @@ namespace EstacionServicio
                                     agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                     agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                    
+
                                     dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGreen;
 
                                     try
                                     {
-                                        dgvResultados.Rows[i - 1].Cells["colProxLlegadaComb"].Style.BackColor = Color.LightBlue;
+                                        if ((i - 1) >= 0)
+                                        {
+                                            dgvResultados.Rows[i - 1].Cells["colProxLlegadaComb"].Style.BackColor = Color.LightBlue;
+                                        }
                                     }
                                     catch (ArgumentOutOfRangeException)
                                     {
@@ -390,6 +424,9 @@ namespace EstacionServicio
                                 {
 
                                     i = dgvResultados.Rows.Add();
+
+                                    
+
                                     agregarEventoAGrilla(i, true, llegadaVehiculoCombustible, 0);
                                     agregarEventoAGrilla(i, false, llegadaVehiculoGas, 0);
                                     agregarDatosAGrila(i, ((LlegadaVehiculosCombustible)siguienteEvento).getNombreEvento());
@@ -402,11 +439,16 @@ namespace EstacionServicio
                                     agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                     agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                   
+
                                     dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.Khaki;
 
                                     try
                                     {
-                                        dgvResultados.Rows[i - 1].Cells["colProxLlegadaComb"].Style.BackColor = Color.LightBlue;
+                                        if ((i - 1) >= 0)
+                                        {
+                                            dgvResultados.Rows[i - 1].Cells["colProxLlegadaComb"].Style.BackColor = Color.LightBlue;
+                                        }
                                     }
                                     catch (ArgumentOutOfRangeException)
                                     {
@@ -429,6 +471,8 @@ namespace EstacionServicio
                                 {
 
                                     i = dgvResultados.Rows.Add();
+
+                                   
                                     agregarEventoAGrilla(i, true, llegadaVehiculoCombustible, 0);
                                     agregarEventoAGrilla(i, false, llegadaVehiculoGas, 0);
                                     agregarDatosAGrila(i, ((LlegadaVehiculosCombustible)siguienteEvento).getNombreEvento());
@@ -441,11 +485,16 @@ namespace EstacionServicio
                                     agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                     agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                    
+
                                     dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.Khaki;
 
                                     try
                                     {
-                                        dgvResultados.Rows[i - 1].Cells["colProxLlegadaComb"].Style.BackColor = Color.LightBlue;
+                                        if ((i - 1) >= 0)
+                                        {
+                                            dgvResultados.Rows[i - 1].Cells["colProxLlegadaComb"].Style.BackColor = Color.LightBlue;
+                                        }
                                     }
                                     catch (ArgumentOutOfRangeException)
                                     {
@@ -469,6 +518,9 @@ namespace EstacionServicio
                                 {
 
                                     i = dgvResultados.Rows.Add();
+
+                                    
+
                                     agregarEventoAGrilla(i, true, llegadaVehiculoCombustible, 0);
                                     agregarEventoAGrilla(i, false, llegadaVehiculoGas, 0);
                                     agregarDatosAGrila(i, ((LlegadaVehiculosCombustible)siguienteEvento).getNombreEvento());
@@ -481,11 +533,16 @@ namespace EstacionServicio
                                     agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                     agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                    
+
                                     dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.Khaki;
 
                                     try
                                     {
-                                        dgvResultados.Rows[i - 1].Cells["colProxLlegadaComb"].Style.BackColor = Color.LightBlue;
+                                        if ((i - 1) >= 0)
+                                        {
+                                            dgvResultados.Rows[i - 1].Cells["colProxLlegadaComb"].Style.BackColor = Color.LightBlue;
+                                        }
                                     }
                                     catch (ArgumentOutOfRangeException)
                                     {
@@ -511,6 +568,9 @@ namespace EstacionServicio
                                 {
 
                                     i = dgvResultados.Rows.Add();
+
+                                   
+
                                     agregarEventoAGrilla(i, true, llegadaVehiculoCombustible, 0);
                                     agregarEventoAGrilla(i, false, llegadaVehiculoGas, 0);
                                     agregarDatosAGrila(i, ((LlegadaVehiculosCombustible)siguienteEvento).getNombreEvento());
@@ -523,11 +583,15 @@ namespace EstacionServicio
                                     agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                     agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                   
                                     dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.Khaki;
 
                                     try
                                     {
-                                        dgvResultados.Rows[i - 1].Cells["colProxLlegadaComb"].Style.BackColor = Color.LightBlue;
+                                        if ((i - 1) >= 0)
+                                        {
+                                            dgvResultados.Rows[i - 1].Cells["colProxLlegadaComb"].Style.BackColor = Color.LightBlue;
+                                        }
                                     }
                                     catch (ArgumentOutOfRangeException)
                                     {
@@ -566,11 +630,16 @@ namespace EstacionServicio
                                 agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                 agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                
+
                                 dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightCoral;
 
                                 try
                                 {
-                                    dgvResultados.Rows[i - 1].Cells["colProxLlegadaComb"].Style.BackColor = Color.LightBlue;
+                                    if ((i - 1) >= 0)
+                                    {
+                                        dgvResultados.Rows[i - 1].Cells["colProxLlegadaComb"].Style.BackColor = Color.LightBlue;
+                                    }
                                 }
                                 catch (ArgumentOutOfRangeException)
                                 {
@@ -582,13 +651,20 @@ namespace EstacionServicio
                             }
                         }
 
-
+                        if (tiempoAPartirDeDondeMostrar < relojSimulacion && eventosYaSimuladosYMostrados < cantidadDeEventosAMostrar)
+                        {
+                            agregarColumnasAGrilla(identificadorVehiculo);//Agrego la Columna correspondiente
+                            agregarTodosLosVehiculos(i);
+                        }
 
                     }
                     else if (siguienteEvento is LlegadaVehiculosGas)//Si el evento es una llegada de un vehiculo a cargar gas
                     {
                         int i = 0;
                         identificadorVehiculo++;
+
+
+
                         llegadaVehiculoGas.simular(relojSimulacion, rand.NextDouble());
 
                         if (SurtidorGas1.Estado == _EstadoSurtidor.Libre || SurtidorGas2.Estado == _EstadoSurtidor.Libre || SurtidorGas3.Estado == _EstadoSurtidor.Libre)
@@ -608,6 +684,9 @@ namespace EstacionServicio
                                 {
 
                                     i = dgvResultados.Rows.Add();
+
+                                    agregarColumnasAGrilla(identificadorVehiculo);//Agrego la Columna correspondiente
+
                                     agregarEventoAGrilla(i, false, llegadaVehiculoCombustible, 0);
                                     agregarEventoAGrilla(i, true, llegadaVehiculoGas, 0);
                                     agregarDatosAGrila(i, ((LlegadaVehiculosGas)siguienteEvento).getNombreEvento());
@@ -620,11 +699,17 @@ namespace EstacionServicio
                                     agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                     agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                    agregarTodosLosVehiculos(i);
+
                                     dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGreen;
 
                                     try
                                     {
-                                        dgvResultados.Rows[i - 1].Cells["colProxLlegadaGas"].Style.BackColor = Color.LightBlue;
+                                        if ((i - 1) >= 0)
+                                        {
+                                            dgvResultados.Rows[i - 1].Cells["colProxLlegadaGas"].Style.BackColor = Color.LightBlue;
+                                        }
+
                                     }
                                     catch (ArgumentOutOfRangeException)
                                     {
@@ -650,6 +735,9 @@ namespace EstacionServicio
                                 {
 
                                     i = dgvResultados.Rows.Add();
+
+                                    agregarColumnasAGrilla(identificadorVehiculo);//Agrego la Columna correspondiente
+
                                     agregarEventoAGrilla(i, false, llegadaVehiculoCombustible, 0);
                                     agregarEventoAGrilla(i, true, llegadaVehiculoGas, 0);
                                     agregarDatosAGrila(i, ((LlegadaVehiculosGas)siguienteEvento).getNombreEvento());
@@ -662,11 +750,16 @@ namespace EstacionServicio
                                     agregarEventoAGrilla(i, true, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                     agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                    agregarTodosLosVehiculos(i);
+
                                     dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGreen;
 
                                     try
                                     {
-                                        dgvResultados.Rows[i - 1].Cells["colProxLlegadaGas"].Style.BackColor = Color.LightBlue;
+                                        if ((i - 1) >= 0)
+                                        {
+                                            dgvResultados.Rows[i - 1].Cells["colProxLlegadaGas"].Style.BackColor = Color.LightBlue;
+                                        }
                                     }
                                     catch (ArgumentOutOfRangeException)
                                     {
@@ -693,6 +786,9 @@ namespace EstacionServicio
                                 {
 
                                     i = dgvResultados.Rows.Add();
+
+                                    agregarColumnasAGrilla(identificadorVehiculo);//Agrego la Columna correspondiente
+
                                     agregarEventoAGrilla(i, false, llegadaVehiculoCombustible, 0);
                                     agregarEventoAGrilla(i, true, llegadaVehiculoGas, 0);
                                     agregarDatosAGrila(i, ((LlegadaVehiculosGas)siguienteEvento).getNombreEvento());
@@ -705,11 +801,16 @@ namespace EstacionServicio
                                     agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                     agregarEventoAGrilla(i, true, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                    agregarTodosLosVehiculos(i);
+
                                     dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGreen;
 
                                     try
                                     {
-                                        dgvResultados.Rows[i - 1].Cells["colProxLlegadaGas"].Style.BackColor = Color.LightBlue;
+                                        if ((i - 1) >= 0)
+                                        {
+                                            dgvResultados.Rows[i - 1].Cells["colProxLlegadaGas"].Style.BackColor = Color.LightBlue;
+                                        }
                                     }
                                     catch (ArgumentOutOfRangeException)
                                     {
@@ -730,13 +831,16 @@ namespace EstacionServicio
                                 //Hay Lugar en el surtidor 1
 
 
-                                SurtidorGas1.ponerEnCola(new Vehiculo("EstadoVehi" + identificadorVehiculo, _EstadoVehiculo.Siendo_Atendido_Gas, _TipoServicio.Gas, relojSimulacion));
+                                SurtidorGas1.ponerEnCola(new Vehiculo("EstadoVehi" + identificadorVehiculo, _EstadoVehiculo.Esperando_Atencion_Gas, _TipoServicio.Gas, relojSimulacion));
                                 ContVehiculosGasIngresanAlSitema++;
                                 //Pregunto si tengo que mostrar en grilla
                                 if (tiempoAPartirDeDondeMostrar < relojSimulacion && eventosYaSimuladosYMostrados < cantidadDeEventosAMostrar)
                                 {
 
                                     i = dgvResultados.Rows.Add();
+
+                                    agregarColumnasAGrilla(identificadorVehiculo);//Agrego la Columna correspondiente
+
                                     agregarEventoAGrilla(i, false, llegadaVehiculoCombustible, 0);
                                     agregarEventoAGrilla(i, true, llegadaVehiculoGas, 0);
                                     agregarDatosAGrila(i, ((LlegadaVehiculosGas)siguienteEvento).getNombreEvento());
@@ -749,11 +853,16 @@ namespace EstacionServicio
                                     agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                     agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                    agregarTodosLosVehiculos(i);
+
                                     dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.Khaki;
 
                                     try
                                     {
-                                        dgvResultados.Rows[i - 1].Cells["colProxLlegadaGas"].Style.BackColor = Color.LightBlue;
+                                        if ((i - 1) >= 0)
+                                        {
+                                            dgvResultados.Rows[i - 1].Cells["colProxLlegadaGas"].Style.BackColor = Color.LightBlue;
+                                        }
                                     }
                                     catch (ArgumentOutOfRangeException)
                                     {
@@ -772,13 +881,16 @@ namespace EstacionServicio
                                 //Hay Lugar en el surtidor 2
 
 
-                                SurtidorGas2.ponerEnCola(new Vehiculo("EstadoVehi" + identificadorVehiculo, _EstadoVehiculo.Siendo_Atendido_Gas, _TipoServicio.Gas, relojSimulacion));
+                                SurtidorGas2.ponerEnCola(new Vehiculo("EstadoVehi" + identificadorVehiculo, _EstadoVehiculo.Esperando_Atencion_Gas, _TipoServicio.Gas, relojSimulacion));
                                 ContVehiculosGasIngresanAlSitema++;
                                 //Pregunto si tengo que mostrar en grilla
                                 if (tiempoAPartirDeDondeMostrar < relojSimulacion && eventosYaSimuladosYMostrados < cantidadDeEventosAMostrar)
                                 {
 
                                     i = dgvResultados.Rows.Add();
+
+                                    agregarColumnasAGrilla(identificadorVehiculo);//Agrego la Columna correspondiente
+
                                     agregarEventoAGrilla(i, false, llegadaVehiculoCombustible, 0);
                                     agregarEventoAGrilla(i, true, llegadaVehiculoGas, 0);
                                     agregarDatosAGrila(i, ((LlegadaVehiculosGas)siguienteEvento).getNombreEvento());
@@ -791,11 +903,16 @@ namespace EstacionServicio
                                     agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                     agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                    agregarTodosLosVehiculos(i);
+
                                     dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.Khaki;
 
                                     try
                                     {
-                                        dgvResultados.Rows[i - 1].Cells["colProxLlegadaGas"].Style.BackColor = Color.LightBlue;
+                                        if ((i - 1) >= 0)
+                                        {
+                                            dgvResultados.Rows[i - 1].Cells["colProxLlegadaGas"].Style.BackColor = Color.LightBlue;
+                                        }
                                     }
                                     catch (ArgumentOutOfRangeException)
                                     {
@@ -814,7 +931,7 @@ namespace EstacionServicio
                                 //Hay Lugar en el surtidor 3
 
 
-                                SurtidorGas3.ponerEnCola(new Vehiculo("EstadoVehi" + identificadorVehiculo, _EstadoVehiculo.Siendo_Atendido_Gas, _TipoServicio.Gas, relojSimulacion));
+                                SurtidorGas3.ponerEnCola(new Vehiculo("EstadoVehi" + identificadorVehiculo, _EstadoVehiculo.Esperando_Atencion_Gas, _TipoServicio.Gas, relojSimulacion));
                                 ContVehiculosGasIngresanAlSitema++;
 
                                 //Pregunto si tengo que mostrar en grilla
@@ -822,6 +939,9 @@ namespace EstacionServicio
                                 {
 
                                     i = dgvResultados.Rows.Add();
+
+                                    agregarColumnasAGrilla(identificadorVehiculo);//Agrego la Columna correspondiente
+
                                     agregarEventoAGrilla(i, false, llegadaVehiculoCombustible, 0);
                                     agregarEventoAGrilla(i, true, llegadaVehiculoGas, 0);
                                     agregarDatosAGrila(i, ((LlegadaVehiculosGas)siguienteEvento).getNombreEvento());
@@ -834,11 +954,16 @@ namespace EstacionServicio
                                     agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                     agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                    agregarTodosLosVehiculos(i);
+
                                     dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.Khaki;
 
                                     try
                                     {
-                                        dgvResultados.Rows[i - 1].Cells["colProxLlegadaGas"].Style.BackColor = Color.LightBlue;
+                                        if ((i - 1) >= 0)
+                                        {
+                                            dgvResultados.Rows[i - 1].Cells["colProxLlegadaGas"].Style.BackColor = Color.LightBlue;
+                                        }
                                     }
                                     catch (ArgumentOutOfRangeException)
                                     {
@@ -852,12 +977,6 @@ namespace EstacionServicio
 
 
                             }
-
-
-
-
-
-
 
 
                         }
@@ -874,7 +993,7 @@ namespace EstacionServicio
                                 i = dgvResultados.Rows.Add();
                                 agregarEventoAGrilla(i, false, llegadaVehiculoCombustible, 0);
                                 agregarEventoAGrilla(i, true, llegadaVehiculoGas, 0);
-                                agregarDatosAGrila(i, ((LlegadaVehiculosCombustible)siguienteEvento).getNombreEvento());
+                                agregarDatosAGrila(i, ((LlegadaVehiculosGas)siguienteEvento).getNombreEvento());
                                 agregarSurtidoresAGrilla(i);
                                 agregarEventoAGrilla(i, false, finServicioCombustibleSurt1, finServicioCombustibleSurt1.getIdSurtidor());
                                 agregarEventoAGrilla(i, false, finServicioCombustibleSurt2, finServicioCombustibleSurt2.getIdSurtidor());
@@ -884,11 +1003,16 @@ namespace EstacionServicio
                                 agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                 agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                agregarTodosLosVehiculos(i);
+
                                 dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightCoral;
 
                                 try
                                 {
-                                    dgvResultados.Rows[i - 1].Cells["colProxLlegadaGas"].Style.BackColor = Color.LightBlue;
+                                    if ((i - 1) >= 0)
+                                    {
+                                        dgvResultados.Rows[i - 1].Cells["colProxLlegadaGas"].Style.BackColor = Color.LightBlue;
+                                    }
                                 }
                                 catch (ArgumentOutOfRangeException)
                                 {
@@ -918,6 +1042,7 @@ namespace EstacionServicio
                                     vehiculoActualSurtGas1.Estado = _EstadoVehiculo.Siendo_Atendido_Gas;
                                     AcumTiempoEsperaVehiculosGas += (relojSimulacion - vehiculoActualSurtGas1.getInicioEspera());
                                     ContVehiConTiempoEsperaVehiculosGas++;
+                                    vehiculoActualSurtGas1.setHoraInicioEspera(0.00);
                                     finServicioGasSurt1.simular(relojSimulacion, rand.NextDouble());
 
                                     //Pregunto si tengo que mostrar en grilla
@@ -937,11 +1062,17 @@ namespace EstacionServicio
                                         agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                         agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                        agregarTodosLosVehiculos(i);
+
                                         dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGray;
 
                                         try
                                         {
-                                            dgvResultados.Rows[i - 1].Cells["colFinGasServ1"].Style.BackColor = Color.LightBlue;
+                                            if ((i - 1) >= 0)
+                                            {
+                                                dgvResultados.Rows[i - 1].Cells["colFinGasServ1"].Style.BackColor = Color.LightBlue;
+                                            }
+
                                         }
                                         catch (ArgumentOutOfRangeException)
                                         {
@@ -977,11 +1108,17 @@ namespace EstacionServicio
                                         agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                         agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                        agregarTodosLosVehiculos(i);
+
                                         dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGray;
 
                                         try
                                         {
-                                            dgvResultados.Rows[i - 1].Cells["colFinGasServ1"].Style.BackColor = Color.LightBlue;
+                                            if ((i - 1) >= 0)
+                                            {
+                                                dgvResultados.Rows[i - 1].Cells["colFinGasServ1"].Style.BackColor = Color.LightBlue;
+                                            }
+
                                         }
                                         catch (ArgumentOutOfRangeException)
                                         {
@@ -994,7 +1131,7 @@ namespace EstacionServicio
                                     }
                                 }
 
-                                
+
 
                                 break;
                             case 2:
@@ -1008,6 +1145,7 @@ namespace EstacionServicio
                                     vehiculoActualSurtGas2.Estado = _EstadoVehiculo.Siendo_Atendido_Gas;
                                     AcumTiempoEsperaVehiculosGas += (relojSimulacion - vehiculoActualSurtGas2.getInicioEspera());
                                     ContVehiConTiempoEsperaVehiculosGas++;
+                                    vehiculoActualSurtGas2.setHoraInicioEspera(0.00);
                                     finServicioGasSurt2.simular(relojSimulacion, rand.NextDouble());
 
                                     //Pregunto si tengo que mostrar en grilla
@@ -1027,11 +1165,17 @@ namespace EstacionServicio
                                         agregarEventoAGrilla(i, true, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                         agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                        agregarTodosLosVehiculos(i);
+
                                         dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGray;
 
                                         try
                                         {
-                                            dgvResultados.Rows[i - 1].Cells["colFinGasServ2"].Style.BackColor = Color.LightBlue;
+                                            if ((i - 1) >= 0)
+                                            {
+                                                dgvResultados.Rows[i - 1].Cells["colFinGasServ2"].Style.BackColor = Color.LightBlue;
+                                            }
+
                                         }
                                         catch (ArgumentOutOfRangeException)
                                         {
@@ -1066,10 +1210,13 @@ namespace EstacionServicio
                                         agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                         agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                        agregarTodosLosVehiculos(i);
+
                                         dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGray;
 
                                         try
                                         {
+
                                             dgvResultados.Rows[i - 1].Cells["colFinGasServ2"].Style.BackColor = Color.LightBlue;
                                         }
                                         catch (ArgumentOutOfRangeException)
@@ -1082,7 +1229,7 @@ namespace EstacionServicio
                                     }
                                 }
 
-                                
+
 
                                 break;
                             case 3:
@@ -1096,6 +1243,7 @@ namespace EstacionServicio
                                     vehiculoActualSurtGas3.Estado = _EstadoVehiculo.Siendo_Atendido_Gas;
                                     AcumTiempoEsperaVehiculosGas += (relojSimulacion - vehiculoActualSurtGas3.getInicioEspera());
                                     ContVehiConTiempoEsperaVehiculosGas++;
+                                    vehiculoActualSurtGas3.setHoraInicioEspera(0.00);
                                     finServicioGasSurt3.simular(relojSimulacion, rand.NextDouble());
 
                                     //Pregunto si tengo que mostrar en grilla
@@ -1115,11 +1263,17 @@ namespace EstacionServicio
                                         agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                         agregarEventoAGrilla(i, true, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                        agregarTodosLosVehiculos(i);
+
                                         dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGray;
 
                                         try
                                         {
-                                            dgvResultados.Rows[i - 1].Cells["colFinGasServ1"].Style.BackColor = Color.LightBlue;
+                                            if ((i - 1) >= 0)
+                                            {
+                                                dgvResultados.Rows[i - 1].Cells["colFinGasServ3"].Style.BackColor = Color.LightBlue;
+                                            }
+
                                         }
                                         catch (ArgumentOutOfRangeException)
                                         {
@@ -1154,11 +1308,17 @@ namespace EstacionServicio
                                         agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                         agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                        agregarTodosLosVehiculos(i);
+
                                         dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGray;
 
                                         try
                                         {
-                                            dgvResultados.Rows[i - 1].Cells["colFinGasServ1"].Style.BackColor = Color.LightBlue;
+                                            if ((i - 1) >= 0)
+                                            {
+                                                dgvResultados.Rows[i - 1].Cells["colFinGasServ3"].Style.BackColor = Color.LightBlue;
+                                            }
+
                                         }
                                         catch (ArgumentOutOfRangeException)
                                         {
@@ -1170,7 +1330,7 @@ namespace EstacionServicio
                                     }
                                 }
 
-                                
+
 
                                 break;
 
@@ -1192,9 +1352,10 @@ namespace EstacionServicio
                                 if (SurtidorCombustible1.tamañoCola() > 0)//Veo si hay vehiculos esperando en cola
                                 {
                                     vehiculoActualSurtComb1 = SurtidorCombustible1.sacarDeCola(); //Saco uno de la cola
-                                    vehiculoActualSurtComb1.Estado = _EstadoVehiculo.Esperando_Atencion_Conbustible;
+                                    vehiculoActualSurtComb1.Estado = _EstadoVehiculo.Siendo_Atendido_Conbustible;
                                     AcumTiempoEsperaVehiculosCombustible += (relojSimulacion - vehiculoActualSurtComb1.getInicioEspera());
                                     ContVehiConTiempoEsperaVehiculosCombustible++;
+                                    vehiculoActualSurtComb1.setHoraInicioEspera(0.00);
                                     finServicioCombustibleSurt1.simular(relojSimulacion, rand.NextDouble());
 
                                     //Pregunto si tengo que mostrar en grilla
@@ -1214,11 +1375,17 @@ namespace EstacionServicio
                                         agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                         agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                        agregarTodosLosVehiculos(i);
+
                                         dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGray;
 
                                         try
                                         {
-                                            dgvResultados.Rows[i - 1].Cells["colFinCombustibleServ1"].Style.BackColor = Color.LightBlue;
+                                            if ((i - 1) >= 0)
+                                            {
+                                                dgvResultados.Rows[i - 1].Cells["colFinCombustibleServ1"].Style.BackColor = Color.LightBlue;
+                                            }
+
                                         }
                                         catch (ArgumentOutOfRangeException)
                                         {
@@ -1251,11 +1418,17 @@ namespace EstacionServicio
                                         agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                         agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                        agregarTodosLosVehiculos(i);
+
                                         dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGray;
 
                                         try
                                         {
-                                            dgvResultados.Rows[i - 1].Cells["colFinCombustibleServ1"].Style.BackColor = Color.LightBlue;
+                                            if ((i - 1) >= 0)
+                                            {
+                                                dgvResultados.Rows[i - 1].Cells["colFinCombustibleServ1"].Style.BackColor = Color.LightBlue;
+                                            }
+
                                         }
                                         catch (ArgumentOutOfRangeException)
                                         {
@@ -1267,7 +1440,7 @@ namespace EstacionServicio
                                     }
                                 }
 
-                                
+
 
                                 break;
                             case 2:
@@ -1278,9 +1451,10 @@ namespace EstacionServicio
                                 if (SurtidorCombustible2.tamañoCola() > 0)//Veo si hay vehiculos esperando en cola
                                 {
                                     vehiculoActualSurtComb2 = SurtidorCombustible2.sacarDeCola(); //Saco uno de la cola
-                                    vehiculoActualSurtComb2.Estado = _EstadoVehiculo.Esperando_Atencion_Conbustible;
+                                    vehiculoActualSurtComb2.Estado = _EstadoVehiculo.Siendo_Atendido_Conbustible;
                                     AcumTiempoEsperaVehiculosCombustible += (relojSimulacion - vehiculoActualSurtComb2.getInicioEspera());
                                     ContVehiConTiempoEsperaVehiculosCombustible++;
+                                    vehiculoActualSurtComb2.setHoraInicioEspera(0.00);
                                     finServicioCombustibleSurt2.simular(relojSimulacion, rand.NextDouble());
 
                                     //Pregunto si tengo que mostrar en grilla
@@ -1300,11 +1474,17 @@ namespace EstacionServicio
                                         agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                         agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                        agregarTodosLosVehiculos(i);
+
                                         dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGray;
 
                                         try
                                         {
-                                            dgvResultados.Rows[i - 1].Cells["colFinCombustibleServ2"].Style.BackColor = Color.LightBlue;
+                                            if ((i - 1) >= 0)
+                                            {
+                                                dgvResultados.Rows[i - 1].Cells["colFinCombustibleServ2"].Style.BackColor = Color.LightBlue;
+                                            }
+
                                         }
                                         catch (ArgumentOutOfRangeException)
                                         {
@@ -1338,11 +1518,17 @@ namespace EstacionServicio
                                         agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                         agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                        agregarTodosLosVehiculos(i);
+
                                         dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGray;
 
                                         try
                                         {
-                                            dgvResultados.Rows[i - 1].Cells["colFinCombustibleServ2"].Style.BackColor = Color.LightBlue;
+                                            if ((i - 1) >= 0)
+                                            {
+                                                dgvResultados.Rows[i - 1].Cells["colFinCombustibleServ2"].Style.BackColor = Color.LightBlue;
+                                            }
+
                                         }
                                         catch (ArgumentOutOfRangeException)
                                         {
@@ -1354,7 +1540,7 @@ namespace EstacionServicio
                                     }
                                 }
 
-                                
+
 
                                 break;
                             case 3:
@@ -1365,9 +1551,10 @@ namespace EstacionServicio
                                 if (SurtidorCombustible3.tamañoCola() > 0)//Veo si hay vehiculos esperando en cola
                                 {
                                     vehiculoActualSurtComb3 = SurtidorCombustible3.sacarDeCola(); //Saco uno de la cola
-                                    vehiculoActualSurtComb3.Estado = _EstadoVehiculo.Esperando_Atencion_Conbustible;
+                                    vehiculoActualSurtComb3.Estado = _EstadoVehiculo.Siendo_Atendido_Conbustible;
                                     AcumTiempoEsperaVehiculosCombustible += (relojSimulacion - vehiculoActualSurtComb3.getInicioEspera());
                                     ContVehiConTiempoEsperaVehiculosCombustible++;
+                                    vehiculoActualSurtComb3.setHoraInicioEspera(0.00);
                                     finServicioCombustibleSurt3.simular(relojSimulacion, rand.NextDouble());
 
                                     //Pregunto si tengo que mostrar en grilla
@@ -1387,11 +1574,17 @@ namespace EstacionServicio
                                         agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                         agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                        agregarTodosLosVehiculos(i);
+
                                         dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGray;
 
                                         try
                                         {
-                                            dgvResultados.Rows[i - 1].Cells["colFinCombustibleServ3"].Style.BackColor = Color.LightBlue;
+                                            if ((i - 1) >= 0)
+                                            {
+                                                dgvResultados.Rows[i - 1].Cells["colFinCombustibleServ3"].Style.BackColor = Color.LightBlue;
+                                            }
+
                                         }
                                         catch (ArgumentOutOfRangeException)
                                         {
@@ -1425,11 +1618,17 @@ namespace EstacionServicio
                                         agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                         agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                        agregarTodosLosVehiculos(i);
+
                                         dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGray;
 
                                         try
                                         {
-                                            dgvResultados.Rows[i - 1].Cells["colFinCombustibleServ3"].Style.BackColor = Color.LightBlue;
+                                            if ((i - 1) >= 0)
+                                            {
+                                                dgvResultados.Rows[i - 1].Cells["colFinCombustibleServ3"].Style.BackColor = Color.LightBlue;
+                                            }
+
                                         }
                                         catch (ArgumentOutOfRangeException)
                                         {
@@ -1442,7 +1641,7 @@ namespace EstacionServicio
 
                                 }
 
-                                
+
 
                                 break;
                             case 4:
@@ -1453,9 +1652,10 @@ namespace EstacionServicio
                                 if (SurtidorCombustible4.tamañoCola() > 0)//Veo si hay vehiculos esperando en cola
                                 {
                                     vehiculoActualSurtComb4 = SurtidorCombustible4.sacarDeCola(); //Saco uno de la cola
-                                    vehiculoActualSurtComb4.Estado = _EstadoVehiculo.Esperando_Atencion_Conbustible;
+                                    vehiculoActualSurtComb4.Estado = _EstadoVehiculo.Siendo_Atendido_Conbustible;
                                     AcumTiempoEsperaVehiculosCombustible += (relojSimulacion - vehiculoActualSurtComb4.getInicioEspera());
                                     ContVehiConTiempoEsperaVehiculosCombustible++;
+                                    vehiculoActualSurtComb4.setHoraInicioEspera(0.00);
                                     finServicioCombustibleSurt4.simular(relojSimulacion, rand.NextDouble());
 
                                     //Pregunto si tengo que mostrar en grilla
@@ -1475,11 +1675,17 @@ namespace EstacionServicio
                                         agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                         agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                        agregarTodosLosVehiculos(i);
+
                                         dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGray;
 
                                         try
                                         {
-                                            dgvResultados.Rows[i - 1].Cells["colFinCombustibleServ4"].Style.BackColor = Color.LightBlue;
+                                            if ((i - 1) >= 0)
+                                            {
+                                                dgvResultados.Rows[i - 1].Cells["colFinCombustibleServ4"].Style.BackColor = Color.LightBlue;
+                                            }
+
                                         }
                                         catch (ArgumentOutOfRangeException)
                                         {
@@ -1513,11 +1719,17 @@ namespace EstacionServicio
                                         agregarEventoAGrilla(i, false, finServicioGasSurt2, finServicioGasSurt2.getIdSurtidor());
                                         agregarEventoAGrilla(i, false, finServicioGasSurt3, finServicioGasSurt3.getIdSurtidor());
 
+                                        agregarTodosLosVehiculos(i);
+
                                         dgvResultados.Rows[i].Cells["colEvento"].Style.BackColor = Color.LightGray;
 
                                         try
                                         {
-                                            dgvResultados.Rows[i - 1].Cells["colFinCombustibleServ4"].Style.BackColor = Color.LightBlue;
+                                            if ((i - 1) >= 0)
+                                            {
+                                                dgvResultados.Rows[i - 1].Cells["colFinCombustibleServ4"].Style.BackColor = Color.LightBlue;
+                                            }
+
                                         }
                                         catch (ArgumentOutOfRangeException)
                                         {
@@ -1527,18 +1739,10 @@ namespace EstacionServicio
 
                                         eventosYaSimuladosYMostrados++;
                                     }
-
                                 }
-
-                                
-
                                 break;
                         }
-
                     }
-
-
-
                 }
             }
             else
@@ -1548,18 +1752,36 @@ namespace EstacionServicio
             }
 
             //Calcular y Mostrar Estadisticas
-            txtPorcenAutosAtendidos.Text = Math.Round((((ContVehiculosCombustibleAtendidos+ ContVehiculosGasAtendidos) / (ContVehiculosCombustibleIngresanAlSitema+ ContVehiculosGasIngresanAlSitema)) * 100),2).ToString();//proporcio de atendido respecto a los que ingresaron al sistema
-            
-            txtPorcenAutosCombAtendidos.Text = Math.Round(((ContVehiculosCombustibleAtendidos/ContVehiculosCombustibleIngresanAlSitema)*100),2).ToString();//proporcion de atendido respecto a los que ingresaron al sistema combustible
+            if (ContVehiculosCombustibleIngresanAlSitema!=0 || ContVehiculosGasIngresanAlSitema!=0)
+            {
+                txtPorcenAutosAtendidos.Text = Math.Round((((ContVehiculosCombustibleAtendidos + ContVehiculosGasAtendidos) / (ContVehiculosCombustibleIngresanAlSitema + ContVehiculosGasIngresanAlSitema)) * 100), 2).ToString();//proporcio de atendido respecto a los que ingresaron al sistema 
+            }
+
+            if (ContVehiculosCombustibleIngresanAlSitema!=0)
+            {
+                txtPorcenAutosCombAtendidos.Text = Math.Round(((ContVehiculosCombustibleAtendidos / ContVehiculosCombustibleIngresanAlSitema) * 100), 2).ToString();//proporcion de atendido respecto a los que ingresaron al sistema combustible 
+            }
             //txtPorcenAutosCombAtendidos.Text = ((ContVehiculosCombustibleAtendidos / (ContVehiculosCombustibleIngresanAlSitema + ContVehiculosCombustibleRechazados)) * 100).ToString();//proporcion de en relacion al total, es decir ingresaron + rechazados
-            txtPorcenAutosGasAtendidos.Text = Math.Round(((ContVehiculosGasAtendidos / ContVehiculosGasIngresanAlSitema) * 100),2).ToString();//proporcio de atendido respecto a los que ingresaron al sistema gas
+            if (ContVehiculosGasIngresanAlSitema!=0)
+            {
+                txtPorcenAutosGasAtendidos.Text = Math.Round(((ContVehiculosGasAtendidos / ContVehiculosGasIngresanAlSitema) * 100), 2).ToString();//proporcio de atendido respecto a los que ingresaron al sistema gas 
+            }
             //txtPorcenAutosGasAtendidos.Text = ((ContVehiculosGasAtendidos / (ContVehiculosGasIngresanAlSitema + ContVehiculosGasRechazados)) * 100).ToString();
             txtPromTiempoOcioSurt.Text = Math.Round(((AcumTiempoOcioServidoresCombustible + AcumTiempoOcioServidoresGas) / 7), 2).ToString();
             txtPromTiempoOcioSurtComb.Text = Math.Round((AcumTiempoOcioServidoresCombustible / 4), 2).ToString();
             txtPromTiempoOcioSurtGas.Text = Math.Round((AcumTiempoOcioServidoresGas / 3), 2).ToString();
-            txtTiempoPromEsperaVehi.Text = Math.Round((((AcumTiempoEsperaVehiculosCombustible + AcumTiempoEsperaVehiculosGas) / (ContVehiConTiempoEsperaVehiculosCombustible + ContVehiConTiempoEsperaVehiculosGas))), 2).ToString();
-            txtTiempoPromEsperaVehiComb.Text = Math.Round((AcumTiempoEsperaVehiculosCombustible / ContVehiConTiempoEsperaVehiculosCombustible), 2).ToString();
-            txtTiempoPromEsperaVehiGas.Text = Math.Round((AcumTiempoEsperaVehiculosGas / ContVehiConTiempoEsperaVehiculosGas), 2).ToString();
+            if (ContVehiConTiempoEsperaVehiculosCombustible!=0|| ContVehiConTiempoEsperaVehiculosGas!=0)
+            {
+                txtTiempoPromEsperaVehi.Text = Math.Round((((AcumTiempoEsperaVehiculosCombustible + AcumTiempoEsperaVehiculosGas) / (ContVehiConTiempoEsperaVehiculosCombustible + ContVehiConTiempoEsperaVehiculosGas))), 2).ToString(); 
+            }
+            if (ContVehiConTiempoEsperaVehiculosCombustible!=0)
+            {
+                txtTiempoPromEsperaVehiComb.Text = Math.Round((AcumTiempoEsperaVehiculosCombustible / ContVehiConTiempoEsperaVehiculosCombustible), 2).ToString(); 
+            }
+            if (ContVehiConTiempoEsperaVehiculosGas!=0)
+            {
+                txtTiempoPromEsperaVehiGas.Text = Math.Round((AcumTiempoEsperaVehiculosGas / ContVehiConTiempoEsperaVehiculosGas), 2).ToString(); 
+            }
             txtTotalCombRechazados.Text = ContVehiculosCombustibleRechazados.ToString();
             txtTotalCombustibleIngresados.Text = ContVehiculosCombustibleIngresanAlSitema.ToString();
             txtTotalGasIngresados.Text = ContVehiculosGasIngresanAlSitema.ToString();
@@ -1571,32 +1793,9 @@ namespace EstacionServicio
 
             //Fin Bloque Simulacion
         }
-        //private double rand.NextDouble()
-        //{
-
-
-        //    listaRandom.Add(Math.Round(rand.rand.NextDouble(), 2));
-
-        //    double randFinal = Math.Round(rand.rand.NextDouble(), 2);
-
-        //    while (estaEnLista(randFinal))
-        //    {
-        //        randFinal = Math.Round(rand.rand.NextDouble(), 2);
-
-
-        //    }
-
-        //    listaRandom.Clear();
-        //    return randFinal;
-
-        //}
-        //private bool estaEnLista(double random)
-        //{
-        //    return listaRandom.Contains(random);
-        //}
         private void agregarColumnasAGrilla(int identificadorVehiculo)
         {
-            dgvResultados.Columns.Add("colEstadoVehiculo" + identificadorVehiculo, "Estado Vehiculos" + identificadorVehiculo);
+            dgvResultados.Columns.Add("EstadoVehi" + identificadorVehiculo, "Estado Vehiculos" + identificadorVehiculo);
             dgvResultados.Columns.Add("colHoraInicioEsperaVehiculo" + identificadorVehiculo, "Hora Inicio Espera Vehiculo" + identificadorVehiculo);
         }
 
@@ -1803,8 +2002,72 @@ namespace EstacionServicio
             dgvResultados.Rows[i].Cells["colContVehiculosEsperaronGas"].Value = ContVehiConTiempoEsperaVehiculosGas;
 
         }
+
+        private void agregarTodosLosVehiculos(int i)
+        {
+            agregarVehiculoAGrilla(vehiculoActualSurtComb1, i);
+            agregarVehiculoAGrilla(vehiculoActualSurtComb2, i);
+            agregarVehiculoAGrilla(vehiculoActualSurtComb3, i);
+            agregarVehiculoAGrilla(vehiculoActualSurtComb4, i);
+            agregarVehiculoAGrilla(vehiculoActualSurtGas1, i);
+            agregarVehiculoAGrilla(vehiculoActualSurtGas2, i);
+            agregarVehiculoAGrilla(vehiculoActualSurtGas3, i);
+
+
+            foreach (Vehiculo vehi in SurtidorCombustible1.getCola())
+            {
+                agregarVehiculoAGrilla(vehi, i);
+            }
+            foreach (Vehiculo vehi in SurtidorCombustible2.getCola())
+            {
+                agregarVehiculoAGrilla(vehi, i);
+            }
+            foreach (Vehiculo vehi in SurtidorCombustible3.getCola())
+            {
+                agregarVehiculoAGrilla(vehi, i);
+            }
+            foreach (Vehiculo vehi in SurtidorCombustible4.getCola())
+            {
+                agregarVehiculoAGrilla(vehi, i);
+            }
+            foreach (Vehiculo vehi in SurtidorGas1.getCola())
+            {
+                agregarVehiculoAGrilla(vehi, i);
+            }
+            foreach (Vehiculo vehi in SurtidorGas2.getCola())
+            {
+                agregarVehiculoAGrilla(vehi, i);
+            }
+            foreach (Vehiculo vehi in SurtidorGas3.getCola())
+            {
+                agregarVehiculoAGrilla(vehi, i);
+            }
+
+
+
+
+
+
+        }
         private void agregarVehiculoAGrilla(Vehiculo vehiculo, int i)
         {
+            if (vehiculo != null)
+            {
+                try
+                {
+                    dgvResultados.Rows[i].Cells[vehiculo.Id].Value = vehiculo.Estado;
+                    dgvResultados.Rows[i].Cells[vehiculo.Id.Replace("EstadoVehi", "colHoraInicioEsperaVehiculo")].Value = Math.Round(vehiculo.getInicioEspera(), 2);
+                    if (vehiculo.getInicioEspera() <= 0)
+                    {
+                        dgvResultados.Rows[i].Cells[vehiculo.Id.Replace("EstadoVehi", "colHoraInicioEsperaVehiculo")].Value = "-";
+
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
 
         }
 
@@ -1930,20 +2193,22 @@ namespace EstacionServicio
 
 
             //Remover Columnas de Objetos Temporales
-            //int columnasExtras = dgvResultados.Columns.Count - 23;
-            //for (int i = 1; i <= (columnasExtras); i++)
-            //{
-            //    try
-            //    {
-            //        dgvResultados.Columns.Remove("estadoP" + i);
-            //        dgvResultados.Columns.Remove("horaP" + i);
-            //    }
-            //    catch (Exception)
-            //    {
+
+            int columnas = dgvResultados.Columns.Count;
+
+            for (int i = columnas; i >= 52; i--)
+            {
+                try
+                {
+                    dgvResultados.Columns.RemoveAt(i);
+
+                }
+                catch (Exception)
+                {
 
 
-            //    }
-            //}
+                }
+            }
 
             //Habilitar Boton Simular
             btnSimular.Enabled = true;
