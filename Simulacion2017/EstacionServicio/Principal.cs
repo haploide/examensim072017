@@ -247,7 +247,7 @@ namespace EstacionServicio
                                     catch (ArgumentOutOfRangeException)
                                     {
 
-                                        throw;
+                                        
                                     }
 
                                     eventosYaSimuladosYMostrados++;
@@ -298,7 +298,7 @@ namespace EstacionServicio
                                     catch (ArgumentOutOfRangeException)
                                     {
 
-                                        throw;
+                                        
                                     }
 
                                     eventosYaSimuladosYMostrados++;
@@ -350,7 +350,7 @@ namespace EstacionServicio
                                     catch (ArgumentOutOfRangeException)
                                     {
 
-                                        throw;
+                                        
                                     }
 
                                     eventosYaSimuladosYMostrados++;
@@ -401,7 +401,7 @@ namespace EstacionServicio
                                     catch (ArgumentOutOfRangeException)
                                     {
 
-                                        throw;
+                                        
                                     }
 
                                     eventosYaSimuladosYMostrados++;
@@ -453,7 +453,7 @@ namespace EstacionServicio
                                     catch (ArgumentOutOfRangeException)
                                     {
 
-                                        throw;
+                                        
                                     }
 
                                     eventosYaSimuladosYMostrados++;
@@ -499,7 +499,7 @@ namespace EstacionServicio
                                     catch (ArgumentOutOfRangeException)
                                     {
 
-                                        throw;
+                                        
                                     }
 
                                     eventosYaSimuladosYMostrados++;
@@ -547,7 +547,7 @@ namespace EstacionServicio
                                     catch (ArgumentOutOfRangeException)
                                     {
 
-                                        throw;
+                                        
                                     }
 
                                     eventosYaSimuladosYMostrados++;
@@ -596,7 +596,7 @@ namespace EstacionServicio
                                     catch (ArgumentOutOfRangeException)
                                     {
 
-                                        throw;
+                                        
                                     }
 
                                     eventosYaSimuladosYMostrados++;
@@ -644,7 +644,7 @@ namespace EstacionServicio
                                 catch (ArgumentOutOfRangeException)
                                 {
 
-                                    throw;
+                                    
                                 }
 
                                 eventosYaSimuladosYMostrados++;
@@ -713,7 +713,7 @@ namespace EstacionServicio
                                     catch (ArgumentOutOfRangeException)
                                     {
 
-                                        throw;
+                                        
                                     }
 
                                     eventosYaSimuladosYMostrados++;
@@ -762,7 +762,7 @@ namespace EstacionServicio
                                     catch (ArgumentOutOfRangeException)
                                     {
 
-                                        throw;
+                                        
                                     }
 
                                     eventosYaSimuladosYMostrados++;
@@ -812,7 +812,7 @@ namespace EstacionServicio
                                     catch (ArgumentOutOfRangeException)
                                     {
 
-                                        throw;
+                                        
                                     }
 
                                     eventosYaSimuladosYMostrados++;
@@ -863,7 +863,7 @@ namespace EstacionServicio
                                     catch (ArgumentOutOfRangeException)
                                     {
 
-                                        throw;
+                                        
                                     }
 
                                     eventosYaSimuladosYMostrados++;
@@ -912,7 +912,7 @@ namespace EstacionServicio
                                     catch (ArgumentOutOfRangeException)
                                     {
 
-                                        throw;
+                                        
                                     }
 
                                     eventosYaSimuladosYMostrados++;
@@ -962,7 +962,7 @@ namespace EstacionServicio
                                     catch (ArgumentOutOfRangeException)
                                     {
 
-                                        throw;
+                                        
                                     }
 
                                     eventosYaSimuladosYMostrados++;
@@ -1011,7 +1011,7 @@ namespace EstacionServicio
                                 catch (ArgumentOutOfRangeException)
                                 {
 
-                                    throw;
+                                    
                                 }
 
                                 eventosYaSimuladosYMostrados++;
@@ -1076,7 +1076,7 @@ namespace EstacionServicio
                                         catch (ArgumentOutOfRangeException)
                                         {
 
-                                            throw;
+                                            
                                         }
 
                                         eventosYaSimuladosYMostrados++;
@@ -1122,7 +1122,7 @@ namespace EstacionServicio
                                         catch (ArgumentOutOfRangeException)
                                         {
 
-                                            throw;
+                                           
                                         }
 
                                         eventosYaSimuladosYMostrados++;
@@ -1179,7 +1179,7 @@ namespace EstacionServicio
                                         catch (ArgumentOutOfRangeException)
                                         {
 
-                                            throw;
+                                            
                                         }
 
                                         eventosYaSimuladosYMostrados++;
@@ -1221,7 +1221,7 @@ namespace EstacionServicio
                                         catch (ArgumentOutOfRangeException)
                                         {
 
-                                            throw;
+                                            
                                         }
 
                                         eventosYaSimuladosYMostrados++;
@@ -1277,7 +1277,7 @@ namespace EstacionServicio
                                         catch (ArgumentOutOfRangeException)
                                         {
 
-                                            throw;
+                                           
                                         }
 
                                         eventosYaSimuladosYMostrados++;
@@ -1322,7 +1322,7 @@ namespace EstacionServicio
                                         catch (ArgumentOutOfRangeException)
                                         {
 
-                                            throw;
+                                            
                                         }
 
                                         eventosYaSimuladosYMostrados++;
@@ -1437,7 +1437,7 @@ namespace EstacionServicio
                                         catch (ArgumentOutOfRangeException)
                                         {
 
-                                            throw;
+                                            
                                         }
 
                                         eventosYaSimuladosYMostrados++;
@@ -1493,7 +1493,7 @@ namespace EstacionServicio
                                         catch (ArgumentOutOfRangeException)
                                         {
 
-                                            throw;
+                                            
                                         }
 
                                         eventosYaSimuladosYMostrados++;
@@ -1593,7 +1593,7 @@ namespace EstacionServicio
                                         catch (ArgumentOutOfRangeException)
                                         {
 
-                                            throw;
+                                           
                                         }
 
                                         eventosYaSimuladosYMostrados++;
@@ -1637,7 +1637,7 @@ namespace EstacionServicio
                                         catch (ArgumentOutOfRangeException)
                                         {
 
-                                            throw;
+                                            
                                         }
 
                                         eventosYaSimuladosYMostrados++;
@@ -1694,7 +1694,7 @@ namespace EstacionServicio
                                         catch (ArgumentOutOfRangeException)
                                         {
 
-                                            throw;
+                                            
                                         }
 
                                         eventosYaSimuladosYMostrados++;
@@ -1738,7 +1738,7 @@ namespace EstacionServicio
                                         catch (ArgumentOutOfRangeException)
                                         {
 
-                                            throw;
+                                            
                                         }
 
                                         eventosYaSimuladosYMostrados++;
@@ -2217,7 +2217,7 @@ namespace EstacionServicio
 
             //Remover Columnas de Objetos Temporales
 
-            int columnas = dgvResultados.Columns.Count;
+            int columnas = dgvResultados.Columns.Count-1;
 
             for (int i = columnas; i >= 52; i--)
             {
